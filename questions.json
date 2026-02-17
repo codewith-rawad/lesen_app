@@ -1,38 +1,37 @@
 [
   {
-    "title": "Katia und ihre Nachbarin",
+    "title": "Katja und ihre Nachbarin",
+    "summary_ar": "تتكلم القصة عن زوجين حبا يساعدوا جارتهم التي تسكن وحدها بنقل الأغراض، ولكن بسبب الطقس السيئ لم يستطيعوا. فقررت الجارة دعوتهم لفنجان قهوة. لم ترغب الزوجة بالذهاب بدون هدية، فبحثت عن وصفة كيك على الإنترنت وخبزت كيكة شهية وافتخرت بنفسها كثيراً. عندما وصلوا، لم تُبدِ الجارة أي اهتمام للكيكة بل قدمت لهم كيكة أخرى من السوبرماركت كانت جافة وغير لذيذة. وهذا ما جعل الزوجة تشعر بخيبة أمل من جارتها.",
+    "summary_de": "Die Geschichte handelt von einem Paar, das seiner alleinlebenden Nachbarin beim Umzug helfen wollte. Wegen des schlechten Wetters konnten sie das nicht. Daraufhin lud die Nachbarin sie auf eine Tasse Kaffee ein. Die Ehefrau wollte nicht ohne Geschenk hingehen, suchte im Internet nach einem Kuchenrezept und backte einen köstlichen Kuchen, auf den sie sehr stolz war. Als sie ankamen, zeigte die Nachbarin kein Interesse an dem Kuchen, sondern servierte ihnen einen anderen, trockenen und nicht leckeren Kuchen aus dem Supermarkt. Das enttäuschte die Ehefrau sehr.",
     "questions": [
       {
         "answer": "R",
         "texts": [
           "Katja war stolz auf ihren Kuchen.",
-          "Katja war sehr zufrieden mit ihrem Kuchen.",
-          "Katja empfand große Freude über ihren Kuchen.",
-          "Katja war richtig stolz auf ihren selbstgebackenen Kuchen.",
-          "Katja fühlte sich wegen ihres Kuchens stolz.",
-          "Katja zeigte stolz ihren gelungenen Kuchen."
+          "Der selbstgebackene Kuchen von Katja hat ihr ein gutes Gefühl gegeben.",
+          "Katja blickte mit Freude auf das, was sie gebacken hatte.",
+          "Ihr gelang ein Kuchen, der sie richtig glücklich machte.",
+          "Katja empfand große Zufriedenheit mit ihrem Backergebnis."
         ]
       },
       {
         "answer": "R",
         "texts": [
           "Katja ist von der Bekannten enttäuscht.",
-          "Katja fühlt sich von ihrer Bekannten enttäuscht.",
-          "Die Bekannte hat Katjas Erwartungen nicht erfüllt.",
-          "Katja ist über die Bekannte sehr enttäuscht.",
-          "Katja war vom Verhalten der Bekannten enttäuscht.",
-          "Die Bekannte enttäuschte Katja zutiefst."
+          "Das Verhalten der Bekannten hat bei Katja eine negative Überraschung ausgelöst.",
+          "Katja hatte von der Bekannten mehr erwartet, als dann kam.",
+          "Die Bekannte hat die Hoffnungen von Katja nicht erfüllt.",
+          "Katja fühlt sich von ihrer Bekannten im Stich gelassen."
         ]
       },
       {
         "answer": "R",
         "texts": [
-          "Katia und ihr Mann möchten der Bekannten beim Umzug helfen.",
-          "Katia und ihr Ehemann bieten ihre Hilfe für den Umzug an.",
-          "Das Ehepaar will die Bekannte beim Umzug unterstützen.",
-          "Katia und ihr Mann werden der Bekannten beim Wohnungswechsel helfen.",
-          "Die Bekannte bekommt von Katia und ihrem Mann Umzugshilfe.",
-          "Katia und ihr Partner packen beim Umzug der Bekannten mit an."
+          "Katja und ihr Mann möchten der Bekannten beim Umzug helfen.",
+          "Das Ehepaar hat den Wunsch, die Bekannte beim Wohnungswechsel zu unterstützen.",
+          "Es besteht die Absicht, der Bekannten beim Tragen der Möbel zu helfen.",
+          "Katja und ihr Partner planen, der Bekannten ihre Hilfe anzubieten.",
+          "Sie sind bereit, der Bekannten beim Umzug zur Seite zu stehen."
         ]
       },
       {
@@ -42,7 +41,6 @@
           "Die Bekannte wohnt nur mit ihren Kindern zusammen.",
           "Die Bekannte ist alleinerziehend und lebt mit den Kindern.",
           "In der Wohnung der Bekannten wohnen nur sie und ihre Kinder.",
-          "Die Bekannte hat keinen Partner und lebt mit ihren Kindern.",
           "Die Bekannte führt einen Haushalt allein mit ihren Kindern."
         ]
       },
@@ -50,11 +48,10 @@
         "answer": "F",
         "texts": [
           "Katja und ihr Mann haben beim Transport eines Möbelstücks geholfen.",
-          "Sie halfen der Bekannten, ein Möbelstück zu tragen.",
-          "Gemeinsam transportierten Katja und ihr Mann ein schweres Möbel.",
-          "Beim Tragen eines Schranks waren Katja und ihr Mann behilflich.",
-          "Katja und ihr Mann haben ein Möbelstück für die Bekannte getragen.",
-          "Sie packten mit an, um ein Möbelstück zu transportieren."
+          "Katja und ihr Mann waren beim Transport eines Möbelstücks behilflich.",
+          "Sie haben der Bekannten ein Möbelstück getragen.",
+          "Gemeinsam mit ihrem Mann half Katja beim Tragen eines Möbelstücks.",
+          "Der Transport eines Möbelstücks wurde von Katja und ihrem Mann unterstützt."
         ]
       },
       {
@@ -64,8 +61,7 @@
           "Katja hat genau den Kuchen gebacken, den sie am liebsten mag.",
           "Sie hat ihr absolutes Lieblingsrezept zubereitet.",
           "Gebacken wurde von Katja ihr allerliebster Kuchen.",
-          "Katja hat sich ihren Lieblingskuchen gemacht.",
-          "Sie hat den Kuchen gebacken, den sie am meisten liebt."
+          "Katja hat sich ihren Lieblingskuchen gemacht."
         ]
       },
       {
@@ -75,8 +71,7 @@
           "Die Bekannte lud sie zu einem Mittagessen ein.",
           "Sie wurden von der Bekannten zum Essen eingeladen.",
           "Ein gemeinsames Mittagessen wurde von der Bekannten angeboten.",
-          "Die Bekannte spendierte ihnen ein Mittagessen.",
-          "Sie bekamen ein Angebot für ein Mittagessen von der Bekannten."
+          "Die Bekannte spendierte ihnen ein Mittagessen."
         ]
       },
       {
@@ -86,14 +81,15 @@
           "Der Kuchen der Nachbarin war sehr lecker.",
           "Die Bekannte hatte einen wohlschmeckenden Kuchen gebacken.",
           "Der Geschmack des Kuchens war ausgezeichnet.",
-          "Der Kuchen, den die Bekannte gebacken hatte, war köstlich.",
           "Die Bekannte servierte einen sehr schmackhaften Kuchen."
         ]
       }
     ]
   },
   {
-    "title": "Sebastian in dem Wald",
+    "title": "Sebastian im Wald",
+    "summary_ar": "رجل يمشي في الغابة كان ذاهباً إلى الوادي والطقس كان جميلاً. فجأة بدأت السماء تبرق وترعد وبعدها أمطرت. كان يعلم سابقاً من الإنترنت أن الأشجار لا تؤمن له حماية في العواصف. بدأ يركض باتجاه الشارع حتى صادف سيارة أوصلته إلى الريف.",
+    "summary_de": "Ein Mann ging im Wald spazieren und wollte zu einem Tal. Das Wetter war schön, aber plötzlich gab es Blitz und Donner und es regnete. Er wusste bereits aus dem Internet, dass Bäume bei Gewitter keinen Schutz bieten. Er rannte zur Straße, wo er ein Auto traf, das ihn aufs Land mitnahm.",
     "questions": [
       {
         "answer": "R",
@@ -102,8 +98,7 @@
           "Sebastian erzählt von seiner Wandertour.",
           "Er beschreibt einen Ausflug, den er zu Fuß gemacht hat.",
           "Sebastian unternahm eine Wanderung und berichtet davon.",
-          "In seinem Bericht geht es um einen Fußausflug.",
-          "Sebastian schildert seine Erlebnisse bei einem Spaziergang."
+          "In seinem Bericht geht es um einen Fußausflug."
         ]
       },
       {
@@ -113,8 +108,7 @@
           "Ihm war bekannt, dass Bäume bei Gewitter gefährlich sind.",
           "Sebastian war sich der Gefahr von Bäumen bei Gewitter bewusst.",
           "Er kannte die Regel, dass man sich bei Gewitter nicht unter Bäume stellen soll.",
-          "Dass Bäume bei Gewitter keinen sicheren Schutz bieten, war Sebastian klar.",
-          "Sebastian wusste Bescheid, dass Bäume bei Gewitter lebensgefährlich sein können."
+          "Dass Bäume bei Gewitter keinen sicheren Schutz bieten, war Sebastian klar."
         ]
       },
       {
@@ -124,7 +118,6 @@
           "Sebastians Wanderziel war ein Tal.",
           "Er wollte zu einem Tal wandern.",
           "Das Tal war der Endpunkt seiner Wanderung.",
-          "Er steuerte auf ein Tal als sein Ziel zu.",
           "Die Tour führte Sebastian in ein Tal hinein."
         ]
       },
@@ -135,7 +128,6 @@
           "Schon am Start der Wanderung fiel ihm das schlechte Wetter auf.",
           "Das Wetter war bereits zu Beginn der Tour schlecht.",
           "Gleich zu Anfang der Wanderung wurde er vom schlechten Wetter überrascht.",
-          "Er hatte das schlechte Wetter schon bemerkt, als er loslief.",
           "Der Beginn seiner Wanderung war bereits vom schlechten Wetter geprägt."
         ]
       },
@@ -146,8 +138,7 @@
           "Der Regen war der Startschuss für das Gewitter.",
           "Zuerst regnete es, dann kam das Gewitter.",
           "Das Gewitter setzte mit starkem Regen ein.",
-          "Mit den ersten Regentropfen fing das Gewitter an.",
-          "Der Regen läutete das Gewitter ein."
+          "Mit den ersten Regentropfen fing das Gewitter an."
         ]
       },
       {
@@ -157,25 +148,25 @@
           "Sebastian rannte, so schnell ihn seine Beine trugen, ins Dorf.",
           "Er flüchtete mit voller Geschwindigkeit ins Dorf.",
           "Sebastian sprintete ohne Pause bis ins Dorf.",
-          "Er eilte auf schnellstem Wege ins Dorf.",
-          "Ohne zu zögern, lief Sebastian hastig ins Dorf."
+          "Er eilte auf schnellstem Wege ins Dorf."
         ]
       },
       {
         "answer": "F",
         "texts": [
-          "Sebastian rät sich, vor einer Wanderung das Wetter zu informieren.",
+          "Sebastian rät, vor einer Wanderung das Wetter zu informieren.",
           "Er empfiehlt, vor einer Wanderung den Wetterbericht zu prüfen.",
           "Sebastian gibt den Tipp, sich vorher über die Wetterlage zu informieren.",
           "Man solle vor der Tour unbedingt das Wetter checken, so sein Rat.",
-          "Er rät dazu, sich im Voraus über das Wetter zu erkundigen.",
-          "Sebastians Empfehlung ist, vor der Wanderung die Wettervorhersage anzusehen."
+          "Er rät dazu, sich im Voraus über das Wetter zu erkundigen."
         ]
       }
     ]
   },
   {
     "title": "Ein Mädchen verliert ihr Handy",
+    "summary_ar": "فتاة في الإجازة شعرت أن هاتفها لا يرن، بحثت فلم تجده فاعتقدت أنه سُرق. انزعجت لأن كل بياناتها على الهاتف. بعد قليل، تلقت صديقتها اتصالاً من شخص وجد الهاتف. أخذت الهاتف وكان يعمل وبأضرار خفيفة. عندما أرادت الاتصال لتشكره، وجدت الرقم مجهولاً. في المساء، كانت مع صديقتها في المقهى، فجاء شخص وقال لها \"أنت صاحبة الهاتف\"! بالصدفة كانا في نفس الإجازة ومن نفس المدينة. شكرته ودعته لعصير فقط وليس لعشاء.",
+    "summary_de": "Ein Mädchen war im Urlaub und bemerkte, dass ihr Handy nicht klingelte. Sie suchte es, fand es aber nicht und dachte, es sei gestohlen worden. Sie war verärgert, weil alle ihre Daten auf dem Handy waren. Kurz darauf erhielt ihre Freundin einen Anruf von jemandem, der das Handy gefunden hatte. Sie holte es ab, es funktionierte und hatte nur leichte Schäden. Als sie sich bei dem Finder bedanken wollte, war die Nummer unbekannt. Am Abend saß sie mit ihrer Freundin im Café, da kam ein Mann und sagte: \"Sie sind die Handybesitzerin!\" Zufällig waren sie im gleichen Urlaub und aus derselben Stadt. Sie bedankte sich und lud ihn nur zu einem Saft ein, nicht zum Abendessen.",
     "questions": [
       {
         "answer": "R",
@@ -184,8 +175,7 @@
           "Ihr erster Gedanke war, dass man ihr Handy geklaut hat.",
           "Sie vermutete zunächst einen Diebstahl ihres Handys.",
           "Anfangs ging sie von einem Diebstahl aus.",
-          "Sie glaubte zuerst, ihr Handy sei gestohlen worden.",
-          "Die erste Vermutung war, dass das Handy entwendet wurde."
+          "Sie glaubte zuerst, ihr Handy sei gestohlen worden."
         ]
       },
       {
@@ -195,8 +185,7 @@
           "Es ist sehr ärgerlich, wenn Daten verloren gehen.",
           "Den Datenverlust empfindet sie als katastrophal.",
           "Sie findet es schlimm, wichtige Daten zu verlieren.",
-          "Der Verlust der gespeicherten Daten wiegt schwer.",
-          "Dass die Daten weg sind, ist wirklich schlecht."
+          "Der Verlust der gespeicherten Daten wiegt schwer."
         ]
       },
       {
@@ -206,7 +195,6 @@
           "Der Sturz hat dem Handy nur wenig Schaden zugefügt.",
           "Die Schäden am Handy durch den Fall waren minimal.",
           "Das Handy wurde beim Sturz nur leicht beschädigt.",
-          "Es gab nur kleine Schäden am Handy nach dem Sturz.",
           "Vom Sturz hatte das Handy nur unbedeutende Schäden."
         ]
       },
@@ -217,7 +205,6 @@
           "Es war die Freundin, die mit dem Finder telefonierte.",
           "Die Freundin kontaktierte den Finder des Handys.",
           "Der Finder wurde von ihrer Freundin angerufen.",
-          "Sie bat ihre Freundin, den Finder anzurufen.",
           "Ihre Freundin fand die Nummer des Finders und rief an."
         ]
       },
@@ -228,8 +215,7 @@
           "Gemeinsam mit dem Finder aßen sie zu Abend.",
           "Es gab ein gemeinsames Abendessen mit dem Finder.",
           "Sie und der Finder trafen sich zum Abendessen.",
-          "Zum Abendessen war auch der Finder eingeladen.",
-          "Der Finder gesellte sich beim Abendessen zu ihnen."
+          "Zum Abendessen war auch der Finder eingeladen."
         ]
       },
       {
@@ -239,24 +225,24 @@
           "Mit dem Finder wurde ein Treffen ausgemacht.",
           "Sie machten einen Termin mit dem Finder ab.",
           "Der Finder und sie verabredeten sich für einen Termin.",
-          "Sie trafen eine Terminabsprache mit dem Finder.",
           "Ein Termin mit dem Finder wurde vereinbart."
         ]
       }
     ]
   },
   {
-    "title": "Paul und ihr Fahrrad",
+    "title": "Paul und sein Fahrrad",
+    "summary_ar": "شاب يضع دراجته يومياً في محطة القطار قبل ذهابه للعمل. في أحد الأيام عاد فوجد لاصقاً على القفل. ذهب إلى متجر قريب وطلب كماشة كبيرة فأعطاه صغيرة وقال له أنها تفي بالغرض. رغم قوة القفل إلا أنه كسر بثلاثين ثانية. نصح الشاب الناس أن يضعوا دراجاتهم في أماكن محمية أو في البيت لأن كل أسبوع تحدث سرقات في مدينته.",
+    "summary_de": "Ein junger Mann stellt sein Fahrrad täglich am Bahnhof ab, bevor er zur Arbeit geht. Eines Tages fand er einen Aufkleber auf dem Schloss. Er ging in einen nahe gelegenen Laden und bat um eine große Zange. Der Verkäufer gab ihm eine kleine und sagte, sie würde ausreichen. Obwohl das Schloss stark war, war es in dreißig Sekunden aufgebrochen. Der junge Mann riet den Leuten, ihre Fahrräder an geschützten Orten oder zu Hause abzustellen, weil in seiner Stadt jede Woche Fahrräder gestohlen werden.",
     "questions": [
       {
         "answer": "R",
         "texts": [
           "In Pauls Stadt werden jede Woche Fahrräder gestohlen.",
           "Wöchentlich verschwinden in Pauls Stadt Fahrräder.",
-          "Die Fahrraddiebstähle in Pauls Stadt sind an der Tagesordnung, jede Woche.",
           "In seiner Stadt gibt es jede Woche Fahrraddiebstähle.",
           "Jede Woche werden in der Stadt, in der Paul wohnt, Fahrräder geklaut.",
-          "Fahrraddiebstähle kommen in Pauls Stadt regelmäßig vor, jede Woche."
+          "Fahrraddiebstähle kommen in Pauls Stadt regelmäßig vor."
         ]
       },
       {
@@ -266,7 +252,6 @@
           "Der Bahnhof ist ein Ort, an dem Paul sein Rad oft parkt.",
           "Paul lässt sein Fahrrad oft am Bahnhof stehen.",
           "Sein Fahrrad parkt Paul regelmäßig am Bahnhof.",
-          "Häufig findet man Pauls Rad am Bahnhof abgestellt.",
           "Paul nutzt den Bahnhof oft zum Abstellen seines Fahrrads."
         ]
       },
@@ -277,7 +262,6 @@
           "Am Morgen hat Paul sein Fahrrad mit einem Schloss gesichert.",
           "Paul schloss sein Fahrrad am Morgen ab.",
           "Das Fahrrad wurde von Paul am Morgen abgesperrt.",
-          "Am Vormittag hatte Paul sein Rad schon abgeschlossen.",
           "Paul vergaß nicht, sein Fahrrad am Morgen abzuschließen."
         ]
       },
@@ -288,7 +272,6 @@
           "Paul bekam Hilfe von einem Angestellten.",
           "Ein Mitarbeiter half Paul weiter.",
           "Der Angestellte war in der Lage, Paul zu unterstützen.",
-          "Paul fand in dem Angestellten einen Helfer.",
           "Es war der Angestellte, der Paul helfen konnte."
         ]
       },
@@ -299,19 +282,7 @@
           "Das Werkzeug, mit dem Paul das Kabel durchtrennte, wurde dabei zerstört.",
           "Beim Durchtrennen des Kabels zerbrach das Werkzeug.",
           "Paul benutzte ein Werkzeug, das dabei kaputt ging.",
-          "Das Werkzeug hielt der Belastung nicht stand und ging beim Durchschneiden des Kabels entzwei.",
           "Während er das Kabel durchtrennte, beschädigte Paul das Werkzeug."
-        ]
-      },
-      {
-        "answer": "F",
-        "texts": [
-          "Paul empfiehlt, sichere Schlösser zu kaufen.",
-          "Paul rät jedem, sich ein sicheres Schloss zu besorgen.",
-          "Er empfiehlt, in ein hochwertiges Schloss zu investieren.",
-          "Pauls Rat ist, nur mit einem sicheren Schloss sein Fahrrad zu sichern.",
-          "Man solle einbruchsichere Schlösser kaufen, so Paul.",
-          "Er rät dazu, auf die Sicherheit der Schlösser zu achten."
         ]
       },
       {
@@ -321,14 +292,25 @@
           "Er stand lange an der Bushaltestelle und wartete.",
           "Der Bus ließ lange auf sich warten, Paul wollte nach Hause.",
           "Paul verbrachte viel Zeit mit Warten auf den Bus.",
-          "Um heimzukommen, musste Paul eine gefühlte Ewigkeit auf den Bus warten.",
           "Die Wartezeit auf den Bus nach Hause war sehr lang."
+        ]
+      },
+      {
+        "answer": "F",
+        "texts": [
+          "Paul empfiehlt, sichere Schlösser zu kaufen.",
+          "Paul rät jedem, sich ein sicheres Schloss zu besorgen.",
+          "Er empfiehlt, in ein hochwertiges Schloss zu investieren.",
+          "Man solle einbruchsichere Schlösser kaufen, so Paul.",
+          "Er rät dazu, auf die Sicherheit der Schlösser zu achten."
         ]
       }
     ]
   },
   {
-    "title": "Steffi und ihre Freundin",
+    "title": "Steffi und ihre Kollegin",
+    "summary_ar": "ستيفي كانت سعيدة بذهاب زميلتها في إجازة لأنها ستتمكن من العمل بسرعة وساعات إضافية وتحقيق المزيد من المال. كانت هذه الزميلة تضيع وقتها بالأسئلة والكلام، خصوصاً أسئلة عن الحاسب لأنها تخاف من ارتكاب أي خطأ في العمل، مذكرة ستيفي بأمها. بالرغم أن الزميلة تخبرها بكل ما يجري بالمكتب وتحضر لها أطباق شهية، إلا أنها لا تشتاق لها أبداً.",
+    "summary_de": "Steffi war froh, dass ihre Kollegin in den Urlaub fuhr, weil sie endlich schneller arbeiten, Überstunden machen und mehr Geld verdienen konnte. Die Kollegin verschwendete ihre Zeit mit Fragen und Gesprächen, besonders über den Computer, weil sie Angst hatte, Fehler zu machen. Das erinnerte Steffi an ihre Mutter. Obwohl die Kollegin ihr alles erzählte, was im Büro passierte, und ihr leckere Gerichte mitbrachte, vermisste Steffi sie überhaupt nicht.",
     "questions": [
       {
         "answer": "R",
@@ -337,8 +319,7 @@
           "Vor dem Eintreffen der Kollegin hatte Steffi ein größeres Arbeitspensum.",
           "Als Steffi noch allein war, musste sie mehr arbeiten.",
           "Mit der Ankunft ihrer Kollegin hat sich Steffis Arbeitslast verringert.",
-          "Vorher, ohne die Kollegin, war die Arbeit für Steffi umfangreicher.",
-          "Steffi hatte mehr zu tun, bevor die Kollegin dazustieß."
+          "Vorher, ohne die Kollegin, war die Arbeit für Steffi umfangreicher."
         ]
       },
       {
@@ -348,7 +329,6 @@
           "Steffi findet, dass ihre Kollegin Ähnlichkeiten mit ihrer Mutter hat.",
           "Die Kollegin weckt in Steffi Erinnerungen an ihre Mutter.",
           "Wenn Steffi die Kollegin sieht, muss sie an ihre Mutter denken.",
-          "Die Art der Kollegin ist Steffi von ihrer Mutter vertraut.",
           "Die Kollegin kommt Steffi wie ihre Mutter vor."
         ]
       },
@@ -359,7 +339,6 @@
           "Wenn die Kollegin Computerprobleme hat, steht Steffi ihr zur Seite.",
           "Steffi unterstützt ihre Kollegin bei technischen Schwierigkeiten mit dem PC.",
           "Bei Computerfragen kann die Kollegin auf Steffis Hilfe zählen.",
-          "Steffi ist die Ansprechpartnerin für ihre Kollegin bei allem, was den Computer betrifft.",
           "Die Kollegin bekommt von Steffi Unterstützung, wenn der Computer nicht funktioniert."
         ]
       },
@@ -370,7 +349,6 @@
           "Die Kollegin hält Steffi über die Bürogeschehnisse auf dem Laufenden.",
           "Von ihrer Kollegin bekommt Steffi alle Neuigkeiten aus dem Büro mit.",
           "Steffi wird durch ihre Kollegin über interne Angelegenheiten informiert.",
-          "Die Kollegin ist Steffis Informationsquelle für das, was im Büro passiert.",
           "Über Tratsch und wichtige Dinge im Büro erzählt die Kollegin Steffi."
         ]
       },
@@ -381,7 +359,6 @@
           "Die Kollegin macht Urlaub, und zwar für zwei Wochen.",
           "Steffis Arbeitskollegin ist für 14 Tage verreist.",
           "Eine zweiwöchige Auszeit hat sich die Kollegin gegönnt.",
-          "Die Kollegin ist im Urlaub, sie kommt in zwei Wochen wieder.",
           "Für zwei Wochen ist die Kollegin nicht im Büro, sie ist im Urlaub."
         ]
       },
@@ -392,7 +369,6 @@
           "Steffi wird ihre Kollegin sehr vermissen.",
           "Wenn die Kollegin weg ist, wird Steffi sie vermissen.",
           "Steffi wird die Abwesenheit ihrer Kollegin spüren.",
-          "Es wird Steffi schwerfallen, ohne ihre Kollegin zu sein.",
           "Steffi wird ihre Kollegin während ihrer Abwesenheit vermissen."
         ]
       },
@@ -403,7 +379,6 @@
           "Die Kollegin hat Freude daran, Dinge wiederholt zu erklären.",
           "Es macht der Kollegin nichts aus, Sachverhalte mehrfach zu erläutern.",
           "Geduldig wiederholt die Kollegin ihre Erklärungen mehrfach.",
-          "Wenn etwas nicht verstanden wird, erklärt es die Kollegin gerne nochmal.",
           "Die Kollegin ist dafür bekannt, Dinge auch mehrmals zu erklären."
         ]
       }
@@ -411,6 +386,8 @@
   },
   {
     "title": "Benjamin und Japan",
+    "summary_ar": "بنيامين يرسل إيميل من المكتب لأصدقائه المسافرين في رحلة عمل لليابان. يحييهم ويقول لهم أنهم سيحتاجون وقتاً ليتأقلموا لأنه واجه هذه الصعوبة عندما سافر لليابان. يذكرهم أن الفواكه هناك لذيذة جداً وينصحهم بتجربتها. يطلب منهم إحضار بعض الفواكه له وعند عودتهم يخبروه ليأتي لزيارتهم في بيتهم.",
+    "summary_de": "Benjamin schickt eine E-Mail vom Büro aus an seine Freunde, die auf einer Geschäftsreise nach Japan sind. Er grüßt sie und sagt ihnen, dass sie Zeit brauchen werden, um sich anzupassen, weil er diese Schwierigkeit auch hatte, als er nach Japan reiste. Er erwähnt, dass das Obst dort sehr lecker ist und empfiehlt es ihnen. Er bittet sie, ihm etwas Obst mitzubringen und ihn zu benachrichtigen, wenn sie zurück sind, damit er sie zu Hause besuchen kann.",
     "questions": [
       {
         "answer": "R",
@@ -419,7 +396,6 @@
           "Die E-Mail wurde von Benjamin aus seinem Büro versendet.",
           "Von seiner Arbeitsstelle aus sendet Benjamin die E-Mail.",
           "Benjamin verfasst und schickt die Mail während der Arbeitszeit.",
-          "Der Arbeitsplatz ist der Ort, von dem Benjamin die Mail schreibt.",
           "Benjamin nutzt seinen Arbeitsplatz, um die E-Mail zu verschicken."
         ]
       },
@@ -430,7 +406,6 @@
           "Eva und Uschi sind aus geschäftlichen Gründen in Japan.",
           "Ihr Aufenthalt in Japan ist beruflicher Natur.",
           "Die beiden sind für ihre Arbeit in Japan.",
-          "Japan ist für Eva und Uschi ein geschäftliches Ziel.",
           "Sie halten sich geschäftlich in Japan auf."
         ]
       },
@@ -441,7 +416,6 @@
           "Gleich von Beginn an hatte Benjamin in Japan keine Probleme.",
           "Benjamin fühlte sich in Japan vom ersten Tag an wohl.",
           "Die Eingewöhnung in Japan fiel Benjamin von Anfang an leicht.",
-          "Er hatte von Anfang an alles im Griff in Japan.",
           "Benjamin meisterte die ersten Tage in Japan problemlos."
         ]
       },
@@ -452,7 +426,6 @@
           "Sie fragten Benjamin um Rat bezüglich Japan.",
           "Benjamin wurde von Eva und Uschi um Japantipps gebeten.",
           "Sie baten Benjamin, ihnen Tipps für ihre Japanreise zu geben.",
-          "Eva und Uschi erbaten von Benjamin Ratschläge für Japan.",
           "An Benjamin richteten sie die Bitte um Japantipps."
         ]
       },
@@ -463,7 +436,6 @@
           "Die Mappe, in der Benjamin seine Reisetipps gesammelt hat, ist weg.",
           "Er kann seine Mappe mit den wichtigen Tipps nicht mehr finden.",
           "Seine Sammlung an Reisetipps, die Mappe, ist verschwunden.",
-          "Die Mappe, die alle Reisetipps enthielt, hat Benjamin verloren.",
           "Benjamins gut gefüllte Reisemappe wurde unauffindbar."
         ]
       },
@@ -474,7 +446,6 @@
           "Benjamin hat vor, mit den Freundinnen ein japanisches Restaurant zu besuchen.",
           "Er will mit Eva und Uschi japanische Küche genießen gehen.",
           "Ein gemeinsamer Besuch in einem Japaner ist mit den Freundinnen geplant.",
-          "Benjamin lädt die Freundinnen zum japanischen Essen ein.",
           "Sie werden zusammen japanisch essen gehen, das ist Benjamins Wunsch."
         ]
       }
@@ -482,6 +453,8 @@
   },
   {
     "title": "Katrin und ihr Praktikum",
+    "summary_ar": "فتاة تقوم بتدريب عملي وترسل إيميل لأستاذها تعتذر فيه عن التأخير لأنها كانت مشغولة جداً. تشكره على مساعدته في الحصول على هذا التدريب. في البداية كان مسموحاً لها فقط بمراقبة الطلاب. لاحظت قلة الأنشطة الرياضية فاقترحت على المسؤولة في المدرسة بعض الأنشطة الجديدة. المديرة تفاجأت في البداية ولكنها رحبت بالاقتراحات. لفت انتباهها أن هناك اجتماعاً شهرياً للمعلمين لتطوير المدرسة. وهي حالياً تخطط للسفر إلى بوليفيا للدراسة.",
+    "summary_de": "Ein Mädchen macht ein Praktikum und schreibt eine E-Mail an ihren Professor, um sich für die Verspätung zu entschuldigen, weil sie sehr beschäftigt war. Sie dankt ihm für seine Hilfe bei der Vermittlung des Praktikums. Anfangs durfte sie nur die Schüler beobachten. Sie bemerkte das fehlende Sportangebot und schlug der Schulleiterin neue Aktivitäten vor. Die Direktorin war überrascht, aber sie begrüßte die Vorschläge. Sie erfuhr, dass es monatliche Lehrertreffen zur Schulentwicklung gibt. Sie plant, nach Bolivien zu reisen, um dort zu studieren.",
     "questions": [
       {
         "answer": "R",
@@ -490,7 +463,6 @@
           "Die letzte Zeit war für Katrin sehr arbeitsreich.",
           "Katrin hatte in den vergangenen Tagen viel zu tun.",
           "Es gab für Katrin in letzter Zeit wenig freie Zeit, sie war eingespannt.",
-          "Katrin war in letzter Zeit stark gefordert und ausgelastet.",
           "Sie hatte in der letzten Zeit viel um die Ohren."
         ]
       },
@@ -501,7 +473,6 @@
           "Dank ihres Professors konnte Katrin ins Ausland gehen.",
           "Ihr Professor ebnete ihr den Weg für den Aufenthalt im Ausland.",
           "Die Unterstützung des Professors ermöglichte Katrin die Auslandserfahrung.",
-          "Katrin verdankt es ihrem Professor, dass sie ins Ausland konnte.",
           "Ohne ihren Professor wäre der Auslandsaufenthalt nicht zustande gekommen."
         ]
       },
@@ -512,7 +483,6 @@
           "Es gelang Katrin, die Leiterin von einer neuen Idee zu überzeugen.",
           "Katrin brachte die Leiterin dazu, etwas Neues auszuprobieren.",
           "Die Leiterin ließ sich von Katrin zu einer Neuerung überreden.",
-          "Katrin war überzeugend und die Leiterin stimmte einer Neuheit zu.",
           "Auf Katrins Anregung hin entschied sich die Leiterin für etwas Neues."
         ]
       },
@@ -523,7 +493,6 @@
           "Während ihres gesamten Praktikums ist Katrin als Lehrerin tätig.",
           "Katrin steht die ganze Zeit über vor der Klasse und unterrichtet.",
           "Das Praktikum besteht für Katrin ausschließlich aus Unterrichten.",
-          "Ihre Hauptaufgabe im gesamten Praktikum ist das Unterrichten.",
           "Vom ersten bis zum letzten Tag des Praktikums unterrichtet Katrin."
         ]
       },
@@ -534,7 +503,6 @@
           "Monatlich findet in der Schule ein gemeinsames Treffen von Lehrern und Schülern statt.",
           "Die Schule veranstaltet jeden Monat ein Meeting für Lehrkräfte und Schüler.",
           "Lehrer und Schüler treffen sich einmal im Monat auf Initiative der Schule.",
-          "Einmal im Monat gibt es ein von der Schule organisiertes Zusammentreffen für alle.",
           "Die Schule richtet monatlich ein Treffen aus, bei dem Lehrer und Schüler zusammenkommen."
         ]
       },
@@ -545,7 +513,6 @@
           "Katrin zeigt sich zufrieden mit dem, was sportlich angeboten wird.",
           "Das Sportangebot findet Katrins Zustimmung.",
           "Katrin ist von den sportlichen Aktivitäten angetan.",
-          "Sie ist mit der Auswahl an Sportmöglichkeiten einverstanden.",
           "Das Angebot im Bereich Sport gefällt Katrin sehr gut."
         ]
       },
@@ -556,7 +523,6 @@
           "Katrin hegt den Wunsch, in Bolivien zu studieren.",
           "Sie könnte sich gut vorstellen, in Bolivien zu studieren.",
           "Ein Studium in Bolivien wäre für Katrin reizvoll.",
-          "Katrin interessiert sich für ein Studium in Bolivien.",
           "Der Gedanke, in Bolivien zu studieren, gefällt Katrin."
         ]
       }
@@ -564,6 +530,8 @@
   },
   {
     "title": "Maria und ihr Gepäck",
+    "summary_ar": "فتاة وصلت من رحلة إلى المطار. المطار لم يكن مؤهلاً للانتظار الطويل. بعد أن ارتاحت وشربت قهوة اكتشفت أن حقائبها ضائعة. سألت الموظف فقال لها أن هذا يحدث مع كثير من الناس. ذهبت إلى الفندق لترتاح يومين لتعود مجدداً إلى المطار لاستلام الحقائب بنفسها. نصحتها الموظفة بأن تؤمن حقائبها في المرة القادمة.",
+    "summary_de": "Ein Mädchen kam von einer Reise am Flughafen an. Der Flughafen war nicht auf langes Warten vorbereitet. Nachdem sie sich ausgeruht und einen Kaffee getrunken hatte, stellte sie fest, dass ihre Koffer verloren waren. Sie fragte einen Mitarbeiter, der sagte, das passiere vielen Leuten. Sie ging ins Hotel, um sich zwei Tage auszuruhen, und kehrte dann zum Flughafen zurück, um die Koffer selbst abzuholen. Die Mitarbeiterin riet ihr, das nächste Mal ihr Gepäck zu versichern.",
     "questions": [
       {
         "answer": "R",
@@ -572,7 +540,6 @@
           "Zukünftig will Maria ihr Eigentum versichern lassen.",
           "Maria hat vor, künftig eine Versicherung für ihre Gegenstände abzuschließen.",
           "Sie wird sich in Zukunft gegen Verlust ihrer Sachen versichern.",
-          "Eine Versicherung für ihr Gepäck möchte Maria zukünftig haben.",
           "Maria plant, in Zukunft ihre Sachen zu versichern."
         ]
       },
@@ -583,7 +550,6 @@
           "Maria stehen ein paar freie Tage zur Erholung zur Verfügung.",
           "Sie kann sich nun ein paar Tage lang ausruhen.",
           "Maria hat Zeit, ein paar Tage die Seele baumeln zu lassen.",
-          "Einige Tage hat Maria frei und kann sich entspannen.",
           "Es bieten sich Maria ein paar ruhige Tage zur Entspannung."
         ]
       },
@@ -594,7 +560,6 @@
           "Der Flughafen hatte sich auf die lange Wartezeit eingestellt.",
           "Am Flughafen war man auf das lange Warten vorbereitet.",
           "Man rechnete am Flughafen mit einer langen Wartezeit und war gerüstet.",
-          "Die Vorbereitungen am Flughafen waren auf langes Warten ausgelegt.",
           "Der Flughafen zeigte sich gut vorbereitet auf die lange Wartezeit."
         ]
       },
@@ -605,7 +570,6 @@
           "Es dauerte nicht lange, bis Maria bemerkte, dass ihre Koffer fehlten.",
           "Maria wurde sofort klar, dass ihr Gepäck nicht da war.",
           "Sie bemerkte den Verlust ihrer Koffer auf der Stelle.",
-          "Innerhalb kürzester Zeit realisierte Maria, dass die Koffer weg waren.",
           "Der Verlust der Koffer war für Maria sofort offensichtlich."
         ]
       },
@@ -616,7 +580,6 @@
           "Die Koffer werden von der Firma direkt nach Hause gebracht.",
           "Man wird ihr die Koffer nach Hause schicken.",
           "Die Firma hat einen Lieferservice für die Koffer bis zur Haustür angeboten.",
-          "Sie bekommt die Koffer von der Firma an ihre Wohnadresse geliefert.",
           "Es ist vereinbart, dass die Firma die Koffer nach Hause transportiert."
         ]
       },
@@ -627,7 +590,6 @@
           "Der Angestellte konnte keine Erklärung für das Fehlen des Koffers geben.",
           "Dem Mitarbeiter war der Grund für das Verschwinden des Koffers nicht bekannt.",
           "Der Mitarbeiter wusste nicht, warum der Koffer nicht ankam.",
-          "Eine Ursache für den Verlust des Koffers konnte der Mitarbeiter nicht nennen.",
           "Der Grund, warum der Koffer weg war, blieb auch dem Mitarbeiter verborgen."
         ]
       }
@@ -635,6 +597,8 @@
   },
   {
     "title": "Ein Mädchen und der Umzug",
+    "summary_ar": "فتاة تنتقل لبيت جديد. كان الطقس غائماً جداً لكنها كانت سعيدة بذلك لأنها لا تريد أن تتعرق أثناء النقل. لم تكن معتادة على استخدام السلم. عندما وصلت للبيت الجديد اكتشفت أنها أضاعت المفتاح. ثم أتى المؤجر ومعه مفتاح يفتح كل الشقق وساعدها. رغم كل الظروف كان مزاجها جميلاً. تناولت العشاء في منزلها مع الجيران وقرروا عمل حفل مشاوي في بيت الجيران. أخبرتهم أنها تنوي زرع الورود على شرفتها.",
+    "summary_de": "Ein Mädchen zieht in eine neue Wohnung. Das Wetter war sehr bewölkt, aber sie war froh darüber, weil sie beim Umzug nicht schwitzen wollte. Sie war es nicht gewohnt, die Treppe zu benutzen. Als sie in der neuen Wohnung ankam, merkte sie, dass sie den Schlüssel verloren hatte. Dann kam der Vermieter mit einem Schlüssel, der alle Wohnungen öffnete, und half ihr. Trotz aller Umstände war sie gut gelaunt. Sie aß zu Abend mit den Nachbarn in ihrer Wohnung, und sie beschlossen, eine Grillparty im Haus der Nachbarn zu machen. Sie erzählte ihnen, dass sie Blumen auf ihrem Balkon pflanzen möchte.",
     "questions": [
       {
         "answer": "R",
@@ -643,7 +607,6 @@
           "Auf der Fahrt herrschte eine gute Stimmung.",
           "Alle waren während der Fahrt gut gelaunt.",
           "Die Fahrt verlief in fröhlicher Atmosphäre.",
-          "Während sie fuhren, war die Stimmung ausgelassen.",
           "Es herrschte eine positive Stimmung während der gesamten Fahrt."
         ]
       },
@@ -654,7 +617,6 @@
           "Sie hoffte auf schöneres Wetter.",
           "Ihr wäre wärmeres Wetter lieber gewesen.",
           "Sie hatte sich sonnigeres Wetter erhofft.",
-          "Das Wetter hätte ihrer Meinung nach besser sein können.",
           "Sie wünschte sich, das Wetter wäre angenehmer."
         ]
       },
@@ -665,7 +627,6 @@
           "Sie hatte vor, die Treppe mitzunehmen.",
           "Es war ihr Wunsch, die Treppe auch mitzunehmen.",
           "Sie dachte daran, die Treppe einzupacken.",
-          "Die Treppe sollte auch mitgenommen werden.",
           "Sie überlegte, ob sie die Treppe auch mitnehmen solle."
         ]
       },
@@ -675,7 +636,6 @@
           "Der Besitzer hat den Schlüssel zu ihrer Wohnung.",
           "Der Eigentümer besitzt einen Schlüssel für ihre Wohnung.",
           "Der Vermieter hat einen Wohnungsschlüssel.",
-          "Sie hat dem Besitzer einen Wohnungsschlüssel gegeben.",
           "Ein Schlüssel für ihre Wohnung befindet sich im Besitz des Eigentümers.",
           "Der Besitzer kann mit seinem Schlüssel ihre Wohnung betreten."
         ]
@@ -687,7 +647,6 @@
           "Sie waren zum Abendessen zu den Nachbarn eingeladen.",
           "Das Abendessen wurde in der Wohnung der Nachbarn eingenommen.",
           "Bei den Nachbarn gab es ein gemeinsames Abendessen.",
-          "Die Nachbarn luden sie zum Abendessen ein.",
           "Gegessen haben sie am Abend bei den Nachbarn."
         ]
       },
@@ -698,7 +657,6 @@
           "Auf ihrem Balkon will sie Gemüse anbauen.",
           "Sie plant, ihr eigenes Gemüse auf dem Balkon zu ziehen.",
           "Gemüsepflanzen sollen auf dem Balkon wachsen.",
-          "Ihr Vorhaben ist es, den Balkon mit Gemüse zu bepflanzen.",
           "Sie hat die Absicht, auf dem Balkon Gemüse zu kultivieren."
         ]
       }
@@ -706,6 +664,8 @@
   },
   {
     "title": "Eine schlechte Reise",
+    "summary_ar": "زوجان ذاهبان في رحلة خرجا بدون فطور من المنزل. كانا يرغبان بالإفطار على الطريق في أحد الكافيهات لكن الطريق كان مغلقاً فبدأا بالشجار. مروا لتعبئة البنزين ليعيدوا السيارة للمؤجر. عند الحساب اعتقد الرجل أن البطاقة بها عطل تقني لكنه اكتشف أنها لا تحتوي على مال كافٍ. تسبب لهم ذلك بالتأخر على طائرتهم فاضطروا لحجز جديد. بعدها تناولوا الغداء في مطعم وتصالحوا رغم أن المرأة لم تعتذر.",
+    "summary_de": "Ein Paar macht eine Reise und verließ das Haus ohne Frühstück. Sie wollten unterwegs in einem Café frühstücken, aber die Straße war gesperrt, also fingen sie an zu streiten. Sie hielten an, um zu tanken und das Auto dem Vermieter zurückzugeben. An der Kasse dachte der Mann, die Karte hätte einen technischen Defekt, aber er merkte, dass nicht genug Geld darauf war. Dadurch verpassten sie ihren Flug und mussten einen neuen buchen. Danach aßen sie zu Mittag und versöhnten sich, obwohl die Frau sich nicht entschuldigte.",
     "questions": [
       {
         "answer": "R",
@@ -714,7 +674,6 @@
           "Sie hatten vor, während der Fahrt zu frühstücken.",
           "Geplant war, ein Frühstück auf der Strecke einzulegen.",
           "Unterwegs wollten sie eine Frühstückspause machen.",
-          "Die Idee war, das Frühstück unterwegs einzunehmen.",
           "Sie hatten sich vorgenommen, auf der Reise zu frühstücken."
         ]
       },
@@ -724,7 +683,6 @@
           "Sie mussten das Auto mit Benzin auffüllen.",
           "Es war nötig, Benzin nachzufüllen.",
           "Sie waren gezwungen, zu tanken.",
-          "Das Auto brauchte dringend neuen Sprit.",
           "Sie hielten an einer Tankstelle, um Benzin zu kaufen.",
           "Es musste getankt werden."
         ]
@@ -736,7 +694,6 @@
           "Sie haben den Start der Reise verpasst.",
           "Die Abreise haben sie nicht rechtzeitig geschafft.",
           "Sie kamen zu spät für die geplante Reise.",
-          "Ihnen ist die Reise durch die Lappen gegangen.",
           "Sie konnten nicht rechtzeitig losfahren."
         ]
       },
@@ -747,7 +704,6 @@
           "Die Bankkarte funktionierte aufgrund eines technischen Fehlers nicht.",
           "Ein technisches Problem verhinderte die Nutzung der Karte.",
           "Mit der Karte gab es technische Schwierigkeiten.",
-          "Die Karte war aus technischen Gründen nicht einsatzbereit.",
           "Ein Defekt der Technik machte die Karte unbrauchbar."
         ]
       },
@@ -758,7 +714,6 @@
           "Beim Mittagessen bekamen sie Streit miteinander.",
           "Es kam während des Essens zu einer Auseinandersetzung.",
           "Die Mittagsmahlzeit war von einem Streit überschattet.",
-          "Sie gerieten sich beim Mittagessen in die Haare.",
           "Ein Konflikt brach während des Mittagessens aus."
         ]
       },
@@ -769,7 +724,6 @@
           "Sie bat ihren Mann um Entschuldigung.",
           "Die Frau sagte zu ihrem Mann, es tue ihr leid.",
           "Sie entschuldigte sich bei ihm für ihr Verhalten.",
-          "Die Ehefrau sprach eine Entschuldigung gegenüber ihrem Mann aus.",
           "Sie entschuldigte sich bei ihrem Ehemann."
         ]
       }
@@ -777,6 +731,8 @@
   },
   {
     "title": "Eine Reise nach Mexiko",
+    "summary_ar": "عائلة ذهبت في رحلة إلى المكسيك. كان الطقس رائعاً جداً إلا أن الفتاة شعرت بالملل. اشتروا أثناء الرحلة سمكاً مثلجاً من السوبرماركت وقضوا هناك أسبوعين. رغم جمال الرحلة إلا أنهم لن يكرروها العام القادم.",
+    "summary_de": "Eine Familie machte eine Reise nach Mexiko. Das Wetter war sehr schön, aber das Mädchen langweilte sich. Während der Reise kauften sie tiefgefrorenen Fisch im Supermarkt und verbrachten dort zwei Wochen. Obwohl die Reise schön war, werden sie sie nächstes Jahr nicht wiederholen.",
     "questions": [
       {
         "answer": "R",
@@ -785,7 +741,6 @@
           "Der Familienurlaub in Mexiko dauerte zwei Wochen.",
           "Sie waren für 14 Tage in Mexiko.",
           "Die Familie hielt sich 14 Tage lang in Mexiko auf.",
-          "Es war ein vierzehntägiger Aufenthalt in Mexiko.",
           "Zwei Wochen lang war die Familie in Mexiko."
         ]
       },
@@ -796,7 +751,6 @@
           "Das Mädchen fand die Reise öde.",
           "Sie langweilte sich auf der Reise.",
           "Die Reise war aus Sicht des Mädchens eintönig.",
-          "Für das Mädchen war die Reise alles andere als aufregend.",
           "Das Mädchen empfand die Reise als langweilig."
         ]
       },
@@ -806,7 +760,6 @@
           "Sie haben selbst Fische gefangen und gekocht.",
           "Sie gingen angeln und kochten ihren Fang selbst.",
           "Die Fische, die sie aßen, hatten sie selbst gefangen.",
-          "Sie kochten die Fische, die sie geangelt hatten.",
           "Selbstgefangene Fische wurden von ihnen zubereitet.",
           "Fischfang und -zubereitung lagen in ihren eigenen Händen."
         ]
@@ -818,7 +771,6 @@
           "Gleich zu Beginn war das Wetter sehr stürmisch.",
           "Sturm begleitete sie von der ersten Minute an.",
           "Es war von Anfang an sehr windig und stürmisch.",
-          "Die Reise startete mit stürmischem Wetter.",
           "Schon am Anfang gab es einen Sturm."
         ]
       },
@@ -829,14 +781,15 @@
           "Für nächstes Jahr ist eine Wiederholung der Reise geplant.",
           "Sie haben vor, im nächsten Jahr wieder dorthin zu fahren.",
           "Die Reise soll im kommenden Jahr erneut stattfinden.",
-          "Nächstes Jahr wollen sie die gleiche Reise noch einmal machen.",
           "Sie denken darüber nach, die Reise im nächsten Jahr zu wiederholen."
         ]
       }
     ]
   },
   {
-    "title": "Ein junger Mann und ihre Sprache",
+    "title": "Ein junger Mann und die Sprache",
+    "summary_ar": "شاب يسافر بالقطار ويشتغل على أشياء لتوفير الوقت. صديقته تصحح له الأخطاء. كان يحتاج لكتابة إيميل بالإنجليزية لكنه ليس ماهراً. فتح اللابتوب ليطلع على جمل يكتبها. كانت هناك فتاة تنظر إليه وترى ما يكتب. عندما رأت الأخطاء ضحكت وصححتها له. هي دارسة في كندا لكنها لا تستطيع العمل هناك لأنها تحتاج لتعديل شهادتها. هو كان أستاذه يقول له أن يتعلم الإنجليزية لكنه لم يهتم. أخذوا أرقام بعضهم واتفقوا أن يتدربوا معاً قبل وصول القطار. هي لن تأخذ منه مالاً.",
+    "summary_de": "Ein junger Mann fährt mit dem Zug und erledigt Aufgaben, um Zeit zu sparen. Seine Freundin korrigiert seine Fehler. Er musste eine E-Mail auf Englisch schreiben, aber er war nicht gut darin. Er öffnete den Laptop, um Sätze zu finden. Ein Mädchen sah ihm zu und beobachtete, was er schrieb. Als sie die Fehler sah, lachte sie und korrigierte sie. Sie studiert in Kanada, kann aber dort nicht arbeiten, weil sie ihr Zeugnis anerkennen lassen muss. Sein Lehrer sagte ihm immer, er solle Englisch lernen, aber er kümmerte sich nicht darum. Sie tauschten Nummern und vereinbarten, vor der Ankunft des Zuges zusammen zu üben. Sie wird kein Geld von ihm nehmen.",
     "questions": [
       {
         "answer": "R",
@@ -844,7 +797,6 @@
           "Der junge Mann erledigt Aufgaben im Zug, um den Arbeitsdruck zu verringern.",
           "Im Zug arbeitet er, um den beruflichen Stress zu reduzieren.",
           "Er nutzt die Zugfahrt, um Arbeiten zu erledigen und so den Arbeitsdruck zu mindern.",
-          "Um den Arbeitsdruck zu Hause zu verringern, macht er schon im Zug Aufgaben.",
           "Die Zeit im Zug verwendet er darauf, Aufgaben zu bewältigen und so den Druck zu nehmen.",
           "Indem er schon im Zug arbeitet, versucht er, den späteren Arbeitsdruck zu reduzieren."
         ]
@@ -856,7 +808,6 @@
           "Beim Verfassen von E-Mails ist er sehr auf Fehler bedacht.",
           "Er korrigiert seine E-Mails sorgfältig, während er schreibt.",
           "Seine Aufmerksamkeit gilt beim E-Mail-Schreiben den Fehlern.",
-          "Er passt genau auf, dass sich keine Fehler in seine Mails einschleichen.",
           "Das Schreiben von E-Mails nutzt er, um auf Fehler zu achten."
         ]
       },
@@ -867,7 +818,6 @@
           "Die Freundin aus Kanada besitzt einen Berufsabschluss, der in Österreich und Deutschland anerkannt wird.",
           "Mit ihrer Ausbildung kann die kanadische Freundin sowohl in Österreich als auch in Deutschland arbeiten.",
           "Die Freundin hat in Kanada eine Ausbildung gemacht, die ihr die Arbeit in Österreich und Deutschland erlaubt.",
-          "Ihre Berufsausbildung befähigt die kanadische Freundin zur Arbeit in Österreich und Deutschland.",
           "Die Freundin aus Kanada hat eine Ausbildung, die in Österreich und Deutschland gültig ist."
         ]
       },
@@ -878,7 +828,6 @@
           "Er hat große Anstrengungen unternommen, um Englisch zu lernen.",
           "Das Englischlernen hat ihm viel Mühe bereitet.",
           "Er hat sich intensiv darum bemüht, die englische Sprache zu erlernen.",
-          "Sein Einsatz beim Englischlernen war beachtlich.",
           "Er hat sich wirklich sehr angestrengt, um Englisch zu können."
         ]
       },
@@ -889,7 +838,6 @@
           "Die Freundin verlangt Geld dafür, dass sie ihm die Sprache beibringt.",
           "Sie wird ihm gegen Bezahlung Sprachunterricht geben.",
           "Er muss seiner Freundin Geld zahlen, damit sie ihm die Sprache beibringt.",
-          "Die Freundin bietet ihm Sprachunterricht gegen ein Entgelt an.",
           "Sie will ihm die Sprache nur beibringen, wenn er ihr Geld gibt."
         ]
       },
@@ -900,14 +848,15 @@
           "Telefonisch haben sie einen Termin ausgemacht.",
           "Am Telefon verabredeten sie sich für einen Termin.",
           "Die Terminabsprache erfolgte über das Telefon.",
-          "Sie nutzten das Telefon, um einen Termin zu vereinbaren.",
           "Ein Anruf diente dazu, einen Termin zu fixieren."
         ]
       }
     ]
   },
   {
-    "title": "Ein Mann geht seine Frau fremd",
+    "title": "Ein Mann geht fremd",
+    "summary_ar": "امرأة تكتب لصديقتها وتخبرها أنها رأت زوجها جالساً مع فتاة في مقهى مقابل متجر الإلكترونيات. كانت الفتاة تضع يدها على يد زوجها. عندما رآني زوجي خرج وكلمني أمام متجر الإلكترونيات وحاول أن يضمني لكنني لم أسمح له. ذهبت وتركته ولم أعد أكلمه. أصبح يراسلني ويطلب مني تحديد موعد ليشرح لي الأسباب لكنني لم أرد عليه. أنا الآن منزعجة جداً لأننا منذ أسبوع لا نتكلم وأنا أحبه وأريد أن نعود للحديث.",
+    "summary_de": "Eine Frau schreibt ihrer Freundin und erzählt ihr, dass sie ihren Mann mit einem Mädchen in einem Café gegenüber einem Elektronikgeschäft gesehen hat. Das Mädchen hatte ihre Hand auf die Hand ihres Mannes gelegt. Als er mich sah, kam er raus und sprach mich vor dem Elektronikgeschäft an und versuchte, mich zu umarmen, aber ich ließ es nicht zu. Ich ging und ließ ihn stehen und sprach nicht mehr mit ihm. Er schrieb mir und bat um einen Termin, um mir die Gründe zu erklären, aber ich antwortete ihm nicht. Ich bin jetzt sehr verärgert, weil wir seit einer Woche nicht mehr miteinander sprechen und ich liebe ihn und möchte wieder mit ihm reden.",
     "questions": [
       {
         "answer": "R",
@@ -916,7 +865,6 @@
           "Sie kontaktierte ihn später nicht mehr.",
           "Es gab von ihr später keine Nachricht für ihn.",
           "Sie meldete sich später nicht bei ihm.",
-          "Später erhielt er keine Botschaft von dem Mädchen.",
           "Das Mädchen ließ später nichts mehr von sich hören."
         ]
       },
@@ -927,7 +875,6 @@
           "Sie sprachen eine ganze Woche lang nicht miteinander.",
           "Es dauerte eine Woche, in der sie kein Wort wechselten.",
           "Sieben Tage lang herrschte Schweigen zwischen ihnen.",
-          "Eine Woche hatten sie keinen Kontakt.",
           "In der folgenden Woche gab es kein Gespräch zwischen ihnen."
         ]
       },
@@ -938,7 +885,6 @@
           "Sie wünscht sich, wieder ins Gespräch mit ihm zu kommen.",
           "Das Mädchen hat den Wunsch, erneut mit ihm zu sprechen.",
           "Sie möchte den Kontakt zu ihm wiederherstellen.",
-          "Ihr ist daran gelegen, wieder mit ihm zu kommunizieren.",
           "Das Mädchen strebt ein erneutes Gespräch mit ihm an."
         ]
       },
@@ -949,7 +895,6 @@
           "Er nahm das Mädchen in den Arm.",
           "Der Junge drückte das Mädchen an sich.",
           "Er umschlang das Mädchen mit seinen Armen.",
-          "Das Mädchen wurde von dem Jungen umarmt.",
           "Eine Umarmung gab es zwischen dem Jungen und dem Mädchen."
         ]
       },
@@ -960,7 +905,6 @@
           "Ihr Treffpunkt war ein Laden für Elektronik.",
           "In einem Geschäft für elektronische Geräte kamen sie zusammen.",
           "Sie verabredeten sich in einem Elektronikmarkt.",
-          "Das Treffen fand in einem Geschäft statt, das Elektronik verkauft.",
           "Sie sahen sich in einem Elektronikladen."
         ]
       },
@@ -971,7 +915,6 @@
           "Er redete mit lauter Stimme auf das Mädchen ein.",
           "Seine Worte waren laut und deutlich an das Mädchen gerichtet.",
           "Das Gespräch mit dem Mädchen führte der Junge in lautem Ton.",
-          "Er sprach nicht leise mit ihr, sondern in normaler Lautstärke.",
           "Der Junge unterhielt sich mit dem Mädchen mit normaler Lautstärke."
         ]
       },
@@ -982,7 +925,6 @@
           "Seine Hand legte sich sanft auf ihre.",
           "Er berührte ihre Hand mit der seinen.",
           "Ihre Hände trafen sich, als er seine auf ihre legte.",
-          "Er ergriff ihre Hand.",
           "Er nahm ihre Hand in seine."
         ]
       }
@@ -990,6 +932,8 @@
   },
   {
     "title": "Johanna und die Kleidung",
+    "summary_ar": "يوهانا تعطي ابن أخيها توماس ملابس أطفال مستعملة. كانت دائماً مبدعة وكانت تخيط الملابس بنفسها في الماضي. توماس سعيد جداً لأنه هو وزوجته ليس لديهما مال كثير لشراء ملابس لأطفالهما. صديقته ماري تفعل الأمور بشكل مختلف تماماً: فهي تشتري كل شيء جديد لطفلها ولا ترغب أبداً في الملابس المستعملة. ترى يوهانا أن الأقارب عادةً ما يعطون ملابس أكثر مما يحتاجون لأن الأطفال يكبرون بسرعة.",
+    "summary_de": "Johanna schenkt ihrem Neffen Thomas gebrauchte Kinderkleidung. Sie war schon immer kreativ und hat in der Vergangenheit oft Kleidung selbst genäht. Thomas ist sehr froh darüber, weil er und seine Frau nicht viel Geld haben und so keine neuen Kleider für ihre Kinder kaufen müssen. Seine Freundin Marie macht es ganz anders: Sie kauft für ihr Kind alles neu und möchte keine gebrauchte Kleidung haben. Johanna findet, dass Verwandte oft mehr Kleidung verschenken, als sie brauchen, weil Kinder schnell wachsen.",
     "questions": [
       {
         "answer": "R",
@@ -998,7 +942,6 @@
           "Johanna hat ihre Kleider eigenhändig angefertigt.",
           "Die Kleidungsstücke wurden von Johanna selbst gemacht.",
           "Johanna hat die Kleider mit eigener Hand genäht.",
-          "Selbstgenähte Kleidung trug Johanna.",
           "Johanna stellte ihre Kleidung selbst her."
         ]
       },
@@ -1009,8 +952,7 @@
           "Thomas lehnt die gebrauchten Kleider von Marie ab.",
           "Die Kleidung, die Marie anbietet, nimmt Thomas nicht an.",
           "Thomas möchte die alten Sachen von Marie nicht haben.",
-          "Er will die Kleidung, die Marie ihm geben möchte, nicht annehmen.",
-          "Thomas weigert sich, die gebrauchten Kleidungsstücke von Marie zu nehmen."
+          "Er will die Kleidung, die Marie ihm geben möchte, nicht annehmen."
         ]
       },
       {
@@ -1020,8 +962,7 @@
           "Thomas benötigt finanzielle Mittel für neue Kleidung für sich und sein Kind.",
           "Er ist auf Geld angewiesen, um Kleider für sich und seine Tochter zu erwerben.",
           "Thomas muss Geld ausgeben, um sich und seiner Tochter Kleidung zu kaufen.",
-          "Für neue Sachen für sich und seine Tochter fehlt Thomas das Geld.",
-          "Thomas und seine Tochter brauchen dringend neue Kleidung, dafür benötigt er Geld."
+          "Für neue Sachen für sich und seine Tochter fehlt Thomas das Geld."
         ]
       },
       {
@@ -1031,7 +972,6 @@
           "Marie liebt es, ihren Kindern neue Sachen zu kaufen.",
           "Neue Kleidung für ihre Kinder bereitet Marie Freude.",
           "Marie gönnt ihren Kindern gerne neue Kleidungsstücke.",
-          "Es macht Marie Spaß, für ihre Kinder neue Kleider zu besorgen.",
           "Marie kauft ihren Kindern mit Vorliebe neue Kleidung."
         ]
       },
@@ -1042,7 +982,6 @@
           "Johanna denkt, dass Kleidung ein häufiges Geschenk von Verwandten ist.",
           "Laut Johanna schenken Verwandte gerne Kleidungsstücke.",
           "Johanna findet, dass Verwandte oft Kleider als Geschenk wählen.",
-          "In Johannas Augen sind Kleidungsgeschenke unter Verwandten üblich.",
           "Johanna glaubt, dass Verwandte häufig Kleidung verschenken."
         ]
       },
@@ -1053,7 +992,6 @@
           "Der Sohn von Johanna hatte Kleider in typischen Mädchenfarben an.",
           "Johannas Junge trug Kleidungsstücke, die eher für Mädchen gedacht sind.",
           "Die Kleidung von Johannas Sohn war in femininen Farben gehalten.",
-          "Johannas Sohn lief in Sachen herum, die man normalerweise Mädchen anzieht.",
           "Der Sohn von Johanna war in Mädchenkleidung gekleidet."
         ]
       }

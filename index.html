@@ -8,7 +8,7 @@
     <!-- Font Awesome 6 für tolle Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Magischer animierter Hintergrund -->
@@ -173,6 +173,25 @@
                     </div>
                 </div>
 
+                <!-- ملخص القصة مع اختيار اللغة -->
+                <div class="summary-section" id="summarySection">
+                    <div class="summary-header">
+                        <span class="summary-label">
+                            <i class="fas fa-book-reader"></i>
+                            ملخص القصة / Zusammenfassung
+                        </span>
+                        <div class="summary-lang-tabs">
+                            <button type="button" class="summary-lang-btn active" data-lang="ar" title="العربية">
+                                عربي
+                            </button>
+                            <button type="button" class="summary-lang-btn" data-lang="de" title="Deutsch">
+                                Deutsch
+                            </button>
+                        </div>
+                    </div>
+                    <div class="summary-content" id="summaryContent" dir="auto"></div>
+                </div>
+
                 <div class="question-card" id="questionCard">
                     <div class="question-badge">
                         <i class="fas fa-question-circle"></i>
@@ -215,6 +234,9 @@
                         <i class="fas fa-trophy"></i>
                     </div>
                     <h2 class="results-title">Geschafft! 🎉</h2>
+                    <div class="results-status" id="resultsStatus">
+                        <span class="status-badge status-pass" id="statusBadge">ناجح</span>
+                    </div>
                     <p class="results-subtitle" id="resultsSubtitle">Tolle Leistung!</p>
                     
                     <div class="score-display">

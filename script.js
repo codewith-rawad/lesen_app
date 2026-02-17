@@ -37,6 +37,8 @@ const hörenStoriesGrid = document.getElementById('hörenStoriesGrid');
 
 const currentStoryTitle = document.getElementById('currentStoryTitle');
 const currentCategoryBadge = document.getElementById('currentCategoryBadge');
+const summarySection = document.getElementById('summarySection');
+const summaryContent = document.getElementById('summaryContent');
 const currentQuestionNumber = document.getElementById('currentQuestionNumber');
 const totalQuestions = document.getElementById('totalQuestions');
 const questionTextContainer = document.getElementById('questionTextContainer');
@@ -58,6 +60,8 @@ const correctCount = document.getElementById('correctCount');
 const wrongCount = document.getElementById('wrongCount');
 const pointsEarned = document.getElementById('pointsEarned');
 const resultsSubtitle = document.getElementById('resultsSubtitle');
+const resultsStatus = document.getElementById('resultsStatus');
+const statusBadge = document.getElementById('statusBadge');
 
 const toastNotification = document.getElementById('toastNotification');
 const toastMessage = document.getElementById('toastMessage');
@@ -256,6 +260,9 @@ function selectStory(story, category, index) {
     currentCategoryBadge.innerHTML = `<i class="fas fa-${category === 'Lesen' ? 'book-open' : 'headphones'}"></i> ${category} · Teil 1`;
     totalQuestions.textContent = story.questions.length;
     
+    // Zeige ملخص القصة mit Sprachwahl
+    displaySummary(story);
+    
     // Verstecke alle Sektionen
     heroSection.style.display = 'none';
     lesenSection.style.display = 'none';
@@ -266,6 +273,37 @@ function selectStory(story, category, index) {
     questionsSection.style.display = 'block';
     
     displayQuestion();
+}
+
+// ملخص القصة مع اختيار اللغة
+let currentSummaryLang = 'ar'; // Default: عربي
+
+function displaySummary(story) {
+    if (!summarySection || !summaryContent) return;
+    
+    const hasSummary = story.summary_ar || story.summary_de;
+    if (!hasSummary) {
+        summarySection.style.display = 'none';
+        return;
+    }
+    
+    summarySection.style.display = 'block';
+    
+    document.querySelectorAll('.summary-lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === currentSummaryLang);
+    });
+    
+    // انتقال سلس: تخفيف ثم تغيير المحتوى
+    summaryContent.classList.add('summary-fade');
+    setTimeout(() => {
+        const text = currentSummaryLang === 'ar' 
+            ? (story.summary_ar || story.summary_de || '') 
+            : (story.summary_de || story.summary_ar || '');
+        
+        summaryContent.textContent = text;
+        summaryContent.dir = currentSummaryLang === 'ar' ? 'rtl' : 'ltr';
+        summaryContent.classList.remove('summary-fade');
+    }, 150);
 }
 
 // Zeige aktuelle Frage
@@ -373,16 +411,24 @@ function finishStory() {
     }
     localStorage.setItem('lastActive', today);
     
-    // Zeige Ergebnisse
+    // Zeige Ergebnisse + ناجح/راسب
     const percentage = (score.correct / score.total) * 100;
+    const isPassed = percentage >= 60; // نسبة النجاح 60%
+    
+    if (statusBadge) {
+        statusBadge.textContent = isPassed ? 'ناجح ✓' : 'راسب ✗';
+        statusBadge.className = 'status-badge ' + (isPassed ? 'status-pass' : 'status-fail');
+    }
     
     if (percentage === 100) {
         resultsSubtitle.textContent = 'Perfekt! Alle Antworten richtig! 🏆';
         showToast('🎉 Fantastisch! 100% richtig!', 'success');
     } else if (percentage >= 70) {
         resultsSubtitle.textContent = 'Gut gemacht! Weiter so! 💪';
+    } else if (isPassed) {
+        resultsSubtitle.textContent = 'Geschafft! Übung macht den Meister! 🚀';
     } else {
-        resultsSubtitle.textContent = 'Übung macht den Meister! 🚀';
+        resultsSubtitle.textContent = 'Übung macht den Meister! Versuch es nochmal! 💪';
     }
     
     finalScore.textContent = score.correct;
@@ -454,6 +500,14 @@ backToHomeFromHören.addEventListener('click', () => {
 backToStoriesBtn.addEventListener('click', backToStories);
 moreStoriesBtn.addEventListener('click', backToStories);
 tryAgainBtn.addEventListener('click', tryAgain);
+
+// تبديل لغة الملخص
+document.querySelectorAll('.summary-lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        currentSummaryLang = btn.dataset.lang;
+        if (currentStory) displaySummary(currentStory);
+    });
+});
 
 optionR.addEventListener('click', () => checkAnswer('R'));
 optionF.addEventListener('click', () => checkAnswer('F'));
