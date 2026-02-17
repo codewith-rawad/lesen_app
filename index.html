@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutsch mit Rawad · Lerne Deutsch intelligenter</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome 6 für tolle Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Magischer animierter Hintergrund -->
+    <div class="bg-animation">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+       
+    </div>
+
+    <!-- Fortschrittsbalken oben -->
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Hauptcontainer -->
+    <div class="container" id="homePage">
+        <!-- Header mit Logo und Stats -->
+        <header>
+            <div class="logo">
+                <i class="fas fa-gem logo-icon"></i>
+                <span class="logo-text">Deutsch mit <span class="logo-highlight">Rawad</span></span>
+            </div>
+            <div class="header-stats" id="headerStats">
+                <div class="stat-item">
+                    <i class="fas fa-users stat-icon"></i>
+                    <span id="visitorCount">-</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section mit Willkommensnachricht -->
+            <div class="hero-section" id="heroSection">
+                <div class="hero-badge">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Willkommen zurück!</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-title-main">Deutsch lernen mit Rawad</span>
+                    <span class="hero-title-sub">Hörverstehen & Leseverstehen</span>
+                </h1>
+               
+                
+                <!-- Kategorie-Karten -->
+                <div class="category-cards">
+                    <div class="category-card" id="lesenCategory">
+                        <div class="category-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Leseverstehen</h3>
+                        <p>5 Teile · 40+ Texte</p>
+                        <div class="category-progress">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <button class="btn btn-category" id="startLesenBtn">
+                            <span>Starten</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="category-card" id="hörenCategory">
+                        <div class="category-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <h3>Hörverstehen</h3>
+                        <p>4 Teile · 32+ Audios</p>
+                        <div class="category-progress">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <button class="btn btn-category" id="startHörenBtn">
+                            <span>Starten</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LESEN SEKTION - Teil 1 (Aktuell) -->
+            <div class="category-section" id="lesenSection" style="display: none;">
+                <div class="section-header">
+                    <button class="btn btn-back" id="backToHomeFromLesen">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Zurück</span>
+                    </button>
+                    <h2 class="section-title">
+                        <i class="fas fa-book-open section-title-icon"></i>
+                        Leseverstehen · Teil 1
+                    </h2>
+                    <div class="teil-indicator">
+                        <span class="teil active">1</span>
+                        <span class="teil">2</span>
+                        <span class="teil">3</span>
+                        <span class="teil">4</span>
+                        <span class="teil">5</span>
+                    </div>
+                </div>
+
+                <!-- Geschichten-Grid für Lesen Teil 1 -->
+                <div class="stories-grid" id="lesenStoriesGrid">
+                    <!-- Wird per JavaScript befüllt -->
+                </div>
+            </div>
+
+            <!-- HÖREN SEKTION - Teil 1 -->
+            <div class="category-section" id="hörenSection" style="display: none;">
+                <div class="section-header">
+                    <button class="btn btn-back" id="backToHomeFromHören">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Zurück</span>
+                    </button>
+                    <h2 class="section-title">
+                        <i class="fas fa-headphones section-title-icon"></i>
+                        Hörverstehen · Teil 1
+                    </h2>
+                    <div class="teil-indicator">
+                        <span class="teil active">1</span>
+                        <span class="teil">2</span>
+                        <span class="teil">3</span>
+                        <span class="teil">4</span>
+                    </div>
+                </div>
+
+                <!-- Geschichten-Grid für Hören Teil 1 -->
+                <div class="stories-grid" id="hörenStoriesGrid">
+                    <!-- Wird später mit Hörgeschichten befüllt -->
+                    <div class="story-card coming-soon">
+                        <i class="fas fa-clock story-icon"></i>
+                        <h3>Hörgeschichten</h3>
+                        <p>Bald verfügbar</p>
+                        <div class="story-badge">Teil 1 · 8 Geschichten</div>
+                    </div>
+                    <div class="story-card coming-soon">
+                        <i class="fas fa-clock story-icon"></i>
+                        <h3>Alltagssituationen</h3>
+                        <p>Bald verfügbar</p>
+                        <div class="story-badge">Teil 1 · 6 Dialoge</div>
+                    </div>
+                    <div class="story-card coming-soon">
+                        <i class="fas fa-clock story-icon"></i>
+                        <h3>Kurze Ansagen</h3>
+                        <p>Bald verfügbar</p>
+                        <div class="story-badge">Teil 1 · 5 Ansagen</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fragen Sektion (für beide Kategorien) -->
+            <div class="questions-section" id="questionsSection" style="display: none;">
+                <div class="questions-header">
+                    <button class="btn btn-back" id="backToStoriesBtn">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Zurück zu den Geschichten</span>
+                    </button>
+                    <div class="category-badge" id="currentCategoryBadge"></div>
+                </div>
+                
+                <div class="story-header" id="storyHeader">
+                    <h2 class="story-title" id="currentStoryTitle"></h2>
+                    <div class="story-progress">
+                        <span id="currentQuestionNumber">1</span>/<span id="totalQuestions">8</span>
+                    </div>
+                </div>
+
+                <div class="question-card" id="questionCard">
+                    <div class="question-badge">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Ist diese Aussage richtig oder falsch?</span>
+                    </div>
+                    
+                    <div class="question-text-container" id="questionTextContainer">
+                        <!-- Wird per JavaScript befüllt -->
+                    </div>
+
+                    <div class="options-container" id="optionsContainer">
+                        <button class="option-btn option-r" data-answer="R">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Richtig (R)</span>
+                        </button>
+                        <button class="option-btn option-f" data-answer="F">
+                            <i class="fas fa-times-circle"></i>
+                            <span>Falsch (F)</span>
+                        </button>
+                    </div>
+
+                    <div class="feedback-container" id="feedbackContainer" style="display: none;">
+                        <div class="feedback-icon" id="feedbackIcon"></div>
+                        <div class="feedback-message" id="feedbackMessage"></div>
+                    </div>
+
+                    <div class="navigation-buttons">
+                        <button class="btn btn-next" id="nextBtn" disabled>
+                            <span>Nächste Frage</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ergebnisse Sektion -->
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-card">
+                    <div class="results-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h2 class="results-title">Geschafft! 🎉</h2>
+                    <p class="results-subtitle" id="resultsSubtitle">Tolle Leistung!</p>
+                    
+                    <div class="score-display">
+                        <div class="score-circle" id="scoreCircle">
+                            <span class="score-number" id="finalScore">0</span>
+                            <span class="score-total">/ <span id="finalTotal">0</span></span>
+                        </div>
+                        <div class="score-stats">
+                            <div class="score-stat correct-stat">
+                                <i class="fas fa-check-circle"></i>
+                                <span id="correctCount">0</span> richtig
+                            </div>
+                            <div class="score-stat wrong-stat">
+                                <i class="fas fa-times-circle"></i>
+                                <span id="wrongCount">0</span> falsch
+                            </div>
+                            <div class="score-stat points-stat">
+                                <i class="fas fa-star"></i>
+                                <span id="pointsEarned">0</span> Punkte
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button class="btn btn-primary" id="tryAgainBtn">
+                            <i class="fas fa-redo-alt"></i>
+                            <span>Nochmal üben</span>
+                        </button>
+                        <button class="btn btn-secondary" id="moreStoriesBtn">
+                            <i class="fas fa-book"></i>
+                            <span>Mehr Geschichten</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Deutsch mit Rawad · Lerne Deutsch mit Spaß</p>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Toast Benachrichtigungen -->
+    <div class="toast-notification" id="toastNotification">
+        <i class="fas fa-info-circle"></i>
+        <span id="toastMessage"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
