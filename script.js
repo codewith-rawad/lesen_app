@@ -1,10 +1,20 @@
-// Globale Variablen
+// ============================================
+// الإعدادات الأساسية لـ Supabase
+// ============================================
+const supabaseUrl = 'https://qrznwrvfjacoepegjpov.supabase.co'
+const supabaseKey = 'sb_publishable_tXBsW2vyhWPGngkq6PP4sg_kMVP4Olx'
+const supabase = createClient(supabaseUrl, supabaseKey)
+
+// ============================================
+// المتغيرات العامة
+// ============================================
 let storiesData = [];
 let currentStory = null;
 let currentQuestionIndex = 0;
 let userAnswers = [];
-let currentCategory = 'lesen'; // 'lesen' oder 'hören'
+let currentCategory = 'lesen';
 let currentTeil = 1;
+let currentUser = null; // المستخدم الحالي
 
 let score = {
     total: 0,
@@ -16,7 +26,9 @@ let totalScore = 0;
 let completedStories = 0;
 let streakCount = 0;
 
+// ============================================
 // DOM Elemente
+// ============================================
 const homePage = document.getElementById('homePage');
 const heroSection = document.getElementById('heroSection');
 const lesenSection = document.getElementById('lesenSection');
@@ -60,11 +72,145 @@ const correctCount = document.getElementById('correctCount');
 const wrongCount = document.getElementById('wrongCount');
 const pointsEarned = document.getElementById('pointsEarned');
 const resultsSubtitle = document.getElementById('resultsSubtitle');
-const resultsStatus = document.getElementById('resultsStatus');
 const statusBadge = document.getElementById('statusBadge');
 
 const toastNotification = document.getElementById('toastNotification');
 const toastMessage = document.getElementById('toastMessage');
+
+// عناصر تسجيل الدخول
+const showLoginBtn = document.getElementById('showLoginBtn');
+const logoutBtn = document.getElementById('logoutBtn');
+const loginModal = document.getElementById('loginModal');
+const welcomeMessage = document.getElementById('welcomeMessage');
+const loginUsername = document.getElementById('loginUsername');
+const loginPassword = document.getElementById('loginPassword');
+
+// ============================================
+// دوال Supabase والتسجيل
+// ============================================
+
+// التحقق من حالة المستخدم عند تحميل الصفحة
+async function checkUserStatus() {
+    const savedUser = localStorage.getItem('deutsch_user');
+    
+    if (savedUser) {
+        try {
+            currentUser = JSON.parse(savedUser);
+            
+            // تحقق إذا المستخدم لسا موجود بقاعدة البيانات
+            const { data: user, error } = await supabase
+                .from('users')
+                .select('*')
+                .eq('username', currentUser.username)
+                .eq('is_active', true)
+                .single();
+            
+            if (user) {
+                // المستخدم صحيح
+                showLoginBtn.style.display = 'none';
+                logoutBtn.style.display = 'block';
+                welcomeMessage.style.display = 'block';
+                welcomeMessage.innerHTML = '<i class="fas fa-star"></i> مرحباً ' + currentUser.username + '! أنت الآن تشاهد المحتوى الكامل';
+            } else {
+                // المستخدم غير صحيح
+                logout();
+            }
+        } catch (e) {
+            logout();
+        }
+    } else {
+        showLoginBtn.style.display = 'block';
+        logoutBtn.style.display = 'none';
+        welcomeMessage.style.display = 'none';
+    }
+    
+    // أعد عرض القصص حسب صلاحية المستخدم
+    if (storiesData.length > 0) {
+        displayLesenStories();
+    }
+}
+
+// دالة تسجيل الدخول اليدوي
+async function handleManualLogin() {
+    const username = loginUsername.value.trim();
+    const password = loginPassword.value.trim();
+    
+    if (!username || !password) {
+        showToast('الرجاء إدخال اسم المستخدم وكلمة المرور', 'error');
+        return;
+    }
+    
+    showToast('جاري تسجيل الدخول...', 'info');
+    
+    try {
+        // ابحث عن المستخدم في جدول users
+        const { data: user, error } = await supabase
+            .from('users')
+            .select('*')
+            .eq('username', username)
+            .eq('password', password)
+            .eq('is_active', true)
+            .single();
+        
+        if (error) throw error;
+        
+        if (user) {
+            // دخول ناجح
+            currentUser = {
+                id: user.id,
+                username: user.username
+            };
+            
+            localStorage.setItem('deutsch_user', JSON.stringify(currentUser));
+            
+            closeLoginModal();
+            checkUserStatus();
+            showToast('مرحباً ' + username + '! تم تسجيل الدخول بنجاح', 'success');
+            
+            // أعد تحميل القصص
+            if (storiesData.length > 0) {
+                displayLesenStories();
+            }
+        } else {
+            showToast('اسم المستخدم أو كلمة المرور غير صحيحة', 'error');
+        }
+    } catch (error) {
+        console.error('Login error:', error);
+        showToast('حدث خطأ في تسجيل الدخول', 'error');
+    }
+}
+
+// دالة تسجيل الخروج
+function logout() {
+    currentUser = null;
+    localStorage.removeItem('deutsch_user');
+    showLoginBtn.style.display = 'block';
+    logoutBtn.style.display = 'none';
+    welcomeMessage.style.display = 'none';
+    closeLoginModal();
+    showToast('تم تسجيل الخروج', 'info');
+    
+    // أعد تحميل القصص (المجانية فقط)
+    if (storiesData.length > 0) {
+        displayLesenStories();
+    }
+}
+
+// فتح نافذة تسجيل الدخول
+function showLoginModal() {
+    loginModal.style.display = 'flex';
+    loginUsername.value = '';
+    loginPassword.value = '';
+}
+
+// إغلاق نافذة تسجيل الدخول
+function closeLoginModal() {
+    loginModal.style.display = 'none';
+}
+
+// ============================================
+// بقية دوال التطبيق (مع تعديل عرض القصص)
+// ============================================
 
 // Besucherzähler
 const visitorCountSpan = document.getElementById('visitorCount');
@@ -97,6 +243,10 @@ async function loadStories() {
         }
         storiesData = await response.json();
         hideLoading();
+        
+        // تحقق من حالة المستخدم أولاً
+        await checkUserStatus();
+        
         displayLesenStories();
         updateStats();
         loadSavedProgress();
@@ -178,27 +328,26 @@ function updateStats() {
 function getIconForStory(story) {
     const title = (story.title || '').toLowerCase();
 
-    if (title.includes('nachbarin')) return 'fa-people-arrows';           // Katia und ihre Nachbarin
-    if (title.includes('wald')) return 'fa-tree';                         // Sebastian in dem Wald
-    if (title.includes('handy')) return 'fa-mobile-alt';                  // Ein Mädchen verliert ihr Handy
-    if (title.includes('fahrrad')) return 'fa-bicycle';                   // Paul und ihr Fahrrad
+    if (title.includes('nachbarin')) return 'fa-people-arrows';
+    if (title.includes('wald')) return 'fa-tree';
+    if (title.includes('handy')) return 'fa-mobile-alt';
+    if (title.includes('fahrrad')) return 'fa-bicycle';
     if (title.includes('freundin') && !title.includes('steffi')) return 'fa-user-friends';
-    if (title.includes('steffi')) return 'fa-user-tie';                   // Steffi und ihre Freundin
-    if (title.includes('japan')) return 'fa-flag';                        // Benjamin und Japan
-    if (title.includes('praktikum')) return 'fa-chalkboard-teacher';      // Katrin und ihr Praktikum
-    if (title.includes('gepäck') || title.includes('koffer')) return 'fa-suitcase-rolling'; // Maria und ihr Gepäck
-    if (title.includes('umzug')) return 'fa-truck-moving';                // Ein Mädchen und der Umzug
-    if (title.includes('reise') && title.includes('mexiko')) return 'fa-globe-americas'; // Eine Reise nach Mexiko
-    if (title.includes('reise')) return 'fa-route';                       // Eine schlechte Reise
-    if (title.includes('sprache')) return 'fa-language';                  // Ein junger Mann und ihre Sprache
-    if (title.includes('kleidung')) return 'fa-tshirt';                   // Johanna und die Kleidung
-    if (title.includes('mann') && title.includes('frau')) return 'fa-heart-broken'; // Ein Mann geht seine Frau fremd
+    if (title.includes('steffi')) return 'fa-user-tie';
+    if (title.includes('japan')) return 'fa-flag';
+    if (title.includes('praktikum')) return 'fa-chalkboard-teacher';
+    if (title.includes('gepäck') || title.includes('koffer')) return 'fa-suitcase-rolling';
+    if (title.includes('umzug')) return 'fa-truck-moving';
+    if (title.includes('reise') && title.includes('mexiko')) return 'fa-globe-americas';
+    if (title.includes('reise')) return 'fa-route';
+    if (title.includes('sprache')) return 'fa-language';
+    if (title.includes('kleidung')) return 'fa-tshirt';
+    if (title.includes('mann') && title.includes('frau')) return 'fa-heart-broken';
 
-    // Fallback-Icon
     return 'fa-book-open';
 }
 
-// Zeige Lesen Geschichten
+// Zeige Lesen Geschichten (معدلة لعرض المحتوى حسب المستخدم)
 function displayLesenStories() {
     lesenStoriesGrid.innerHTML = '';
     
@@ -207,6 +356,7 @@ function displayLesenStories() {
         !story.title.includes('Hör') && !story.title.includes('Audio')
     );
     
+    // أول 5 قصص رح تكون مدفوعة
     lesenStories.forEach((story, index) => {
         const storyCard = document.createElement('div');
         storyCard.className = 'story-card';
@@ -215,17 +365,43 @@ function displayLesenStories() {
         const iconClass = getIconForStory(story);
         const isCompleted = localStorage.getItem(`story_${index}_completed`) === 'true';
         
-        storyCard.innerHTML = `
-            <i class="fas ${iconClass} story-icon"></i>
-            <h3>${story.title}</h3>
-            <p>${story.questions.length} Fragen</p>
-            <div class="story-meta">
-                <span class="story-badge">Teil 1</span>
-                <span class="story-status ${isCompleted ? 'completed' : ''}"></span>
-            </div>
-        `;
+        // تحديد إذا القصة مدفوعة (أول 5 قصص)
+        const isPaid = index < 5; // أول 5 قصص مدفوعة
         
-        storyCard.addEventListener('click', () => selectStory(story, 'Lesen', index));
+        // إذا كانت القصة مدفوعة والمستخدم غير مسجل، نخفيها
+        if (isPaid && !currentUser) {
+            storyCard.classList.add('paid-story');
+            storyCard.innerHTML = `
+                <i class="fas fa-lock story-icon" style="color: #f97373;"></i>
+                <h3>${story.title}</h3>
+                <p>${story.questions.length} Fragen</p>
+                <div class="story-meta">
+                    <span class="story-badge" style="background: #f97373;">مشتركين فقط</span>
+                    <span class="story-status ${isCompleted ? 'completed' : ''}"></span>
+                </div>
+            `;
+            
+            // منع النقر على القصة
+            storyCard.style.cursor = 'not-allowed';
+            storyCard.addEventListener('click', (e) => {
+                e.preventDefault();
+                showToast('هذه القصة متاحة فقط للمشتركين', 'error');
+            });
+        } else {
+            // قصة مجانية أو المستخدم مسجل
+            storyCard.innerHTML = `
+                <i class="fas ${iconClass} story-icon"></i>
+                <h3>${story.title}</h3>
+                <p>${story.questions.length} Fragen</p>
+                <div class="story-meta">
+                    <span class="story-badge">Teil 1</span>
+                    <span class="story-status ${isCompleted ? 'completed' : ''}"></span>
+                </div>
+            `;
+            
+            storyCard.addEventListener('click', () => selectStory(story, 'Lesen', index));
+        }
+        
         lesenStoriesGrid.appendChild(storyCard);
     });
     
@@ -276,7 +452,7 @@ function selectStory(story, category, index) {
 }
 
 // ملخص القصة مع اختيار اللغة
-let currentSummaryLang = 'ar'; // Default: عربي
+let currentSummaryLang = 'ar';
 
 function displaySummary(story) {
     if (!summarySection || !summaryContent) return;
@@ -293,7 +469,6 @@ function displaySummary(story) {
         btn.classList.toggle('active', btn.dataset.lang === currentSummaryLang);
     });
     
-    // انتقال سلس: تخفيف ثم تغيير المحتوى
     summaryContent.classList.add('summary-fade');
     setTimeout(() => {
         const text = currentSummaryLang === 'ar' 
@@ -354,11 +529,9 @@ function checkAnswer(selectedAnswer) {
     if (isCorrect) {
         feedbackContainer.className = 'feedback-container correct';
         feedbackIcon.innerHTML = '<i class="fas fa-check-circle"></i>';
-        feedbackMessage.textContent = '✓ Richtig! Gut gemacht!';
         score.correct++;
         totalScore += 10;
         
-        // Zeige lustige Emojis bei richtig
         const emojis = ['🎉', '🌟', '👏', '💪', '⭐'];
         const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
         feedbackMessage.textContent = `✓ Richtig! ${randomEmoji}`;
@@ -398,7 +571,6 @@ function finishStory() {
     
     completedStories++;
     
-    // Erhöhe Streak
     const today = new Date().toDateString();
     const lastActive = localStorage.getItem('lastActive');
     
@@ -411,9 +583,8 @@ function finishStory() {
     }
     localStorage.setItem('lastActive', today);
     
-    // Zeige Ergebnisse + ناجح/راسب
     const percentage = (score.correct / score.total) * 100;
-    const isPassed = percentage >= 60; // نسبة النجاح 60%
+    const isPassed = percentage >= 60;
     
     if (statusBadge) {
         statusBadge.textContent = isPassed ? 'ناجح ✓' : 'راسب ✗';
@@ -473,7 +644,10 @@ function tryAgain() {
     }
 }
 
+// ============================================
 // Event Listener
+// ============================================
+
 startLesenBtn.addEventListener('click', () => {
     heroSection.style.display = 'none';
     lesenSection.style.display = 'block';
@@ -513,6 +687,17 @@ optionR.addEventListener('click', () => checkAnswer('R'));
 optionF.addEventListener('click', () => checkAnswer('F'));
 nextBtn.addEventListener('click', nextQuestion);
 
+// أحداث تسجيل الدخول
+showLoginBtn.addEventListener('click', showLoginModal);
+logoutBtn.addEventListener('click', logout);
+
+// إغلاق النافذة عند الضغط خارجها
+window.addEventListener('click', (e) => {
+    if (e.target === loginModal) {
+        closeLoginModal();
+    }
+});
+
 // Keyboard Support
 document.addEventListener('keydown', (e) => {
     if (questionsSection.style.display === 'block') {
@@ -530,22 +715,22 @@ document.addEventListener('keydown', (e) => {
 document.querySelectorAll('.teil').forEach((teil, index) => {
     teil.addEventListener('click', () => {
         if (teil.classList.contains('active')) return;
-        
         showToast(`Teil ${index + 1} kommt bald! 🚀`, 'info');
     });
 });
 
 // Initialisierung
 document.addEventListener('DOMContentLoaded', async () => {
+    window.handleManualLogin = handleManualLogin;
+    window.closeLoginModal = closeLoginModal;
+    
     await loadStories();
     updateVisitorCount();
     
-    // Willkommensnachricht
     setTimeout(() => {
         showToast('👋 Willkommen bei Deutsch mit Rawad!', 'info');
     }, 1000);
     
-    // Überprüfe Streak
     const lastActive = localStorage.getItem('lastActive');
     const today = new Date().toDateString();
     

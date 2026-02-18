@@ -1358,3 +1358,74 @@ footer {
     margin-top: 40px;
   }
 }
+
+/* أزرار تسجيل الدخول */
+.btn-auth {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+}
+
+.btn-auth:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* بطاقات القصص المدفوعة */
+.story-card.paid-story {
+    opacity: 0.8;
+    background: rgba(255,255,255,0.85);
+    border: 2px dashed #f97373;
+}
+
+.story-card.paid-story .story-icon {
+    color: #f97373;
+}
+
+.story-card.paid-story .story-badge {
+    background: #f97373;
+}
+
+/* نافذة تسجيل الدخول */
+#loginModal {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#loginModal > div {
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+#welcomeMessage {
+    background: linear-gradient(135deg, #2563eb, #a78bfa);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    font-weight: 600;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
