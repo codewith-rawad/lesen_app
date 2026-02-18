@@ -3,209 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deutsch mit Rawad · Lerne Deutsch</title>
+    <title>Deutsch mit Rawad · Lerne Deutsch intelligenter</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome -->
+    <!-- Font Awesome 6 für tolle Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Supabase -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Supabase Library -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-    <!-- الخلفية المتحركة -->
+    <!-- Magischer animierter Hintergrund -->
     <div class="bg-animation">
         <div class="wave wave1"></div>
         <div class="wave wave2"></div>
         <div class="wave wave3"></div>
     </div>
 
-    <!-- شريط التقدم -->
+    <!-- Fortschrittsbalken oben -->
     <div class="progress-bar-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
 
-    <div class="container">
-        <!-- الهيدر -->
+    <!-- Hauptcontainer -->
+    <div class="container" id="homePage">
+        <!-- Header mit Logo und Stats -->
         <header>
             <div class="logo">
                 <i class="fas fa-gem logo-icon"></i>
                 <span class="logo-text">Deutsch mit <span class="logo-highlight">Rawad</span></span>
             </div>
-            <div class="header-stats">
+            <div class="header-stats" id="headerStats">
                 <div class="stat-item">
                     <i class="fas fa-users stat-icon"></i>
                     <span id="visitorCount">-</span>
                 </div>
+                <!-- زر تسجيل الدخول/الخروج -->
                 <div class="stat-item" id="authButtonContainer">
-                    <button class="auth-btn" id="showLoginBtn">
+                    <button class="btn-auth" id="showLoginBtn" style="background: none; border: none; color: white; cursor: pointer;">
                         <i class="fas fa-lock"></i> دخول
                     </button>
-                    <button class="auth-btn" id="logoutBtn" style="display: none;">
+                    <button class="btn-auth" id="logoutBtn" style="background: none; border: none; color: white; cursor: pointer; display: none;">
                         <i class="fas fa-sign-out-alt"></i> خروج
                     </button>
                 </div>
             </div>
         </header>
 
-        <!-- نافذة تسجيل الدخول -->
-        <div id="loginModal" style="display: none;">
-            <div class="modal-content">
-                <h3>دخول المشتركين</h3>
-                <input type="text" id="loginUsername" placeholder="اسم المستخدم">
-                <input type="password" id="loginPassword" placeholder="كلمة المرور">
-                <div class="modal-buttons">
-                    <button onclick="handleManualLogin()" class="btn-primary">دخول</button>
-                    <button onclick="closeLoginModal()" class="btn-secondary">إلغاء</button>
+        <!-- نافذة تسجيل الدخول المنبثقة -->
+        <div id="loginModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; justify-content: center; align-items: center;">
+            <div style="background: white; padding: 30px; border-radius: 20px; max-width: 400px; width: 90%;">
+                <h3 style="margin-bottom: 20px; color: #333;">دخول الأعضاء المشتركين</h3>
+                <input type="text" id="loginUsername" placeholder="اسم المستخدم" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 2px solid #ddd; border-radius: 10px;">
+                <input type="password" id="loginPassword" placeholder="كلمة المرور" style="width: 100%; padding: 12px; margin-bottom: 20px; border: 2px solid #ddd; border-radius: 10px;">
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="handleManualLogin()" style="flex: 1; padding: 12px; background: #2563eb; color: white; border: none; border-radius: 10px; cursor: pointer;">دخول</button>
+                    <button onclick="closeLoginModal()" style="flex: 1; padding: 12px; background: #ddd; border: none; border-radius: 10px; cursor: pointer;">إلغاء</button>
                 </div>
             </div>
         </div>
 
         <main>
-            <!-- الصفحة الرئيسية -->
-            <div id="heroSection">
-                <div class="hero-content">
-                    <h1>Deutsch lernen mit Rawad</h1>
-                    <p>اختبارات قراءة وفهم مع تصحيح فوري</p>
+            <!-- Hero Section mit Willkommensnachricht -->
+            <div class="hero-section" id="heroSection">
+                <div class="hero-badge">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Willkommen zurück!</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-title-main">Deutsch lernen mit Rawad</span>
+                    <span class="hero-title-sub">Hörverstehen & Leseverstehen</span>
+                </h1>
+                
+                <!-- رسالة الترحيب للمستخدم -->
+                <div id="welcomeMessage" style="margin: 20px 0; padding: 15px; background: rgba(255,255,255,0.2); border-radius: 10px; color: white; display: none;">
+                    <i class="fas fa-star"></i> مرحباً! أنت الآن تشاهد المحتوى الكامل
+                </div>
+                
+                <!-- Kategorie-Karten -->
+                <div class="category-cards">
+                    <div class="category-card" id="lesenCategory">
+                        <div class="category-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Leseverstehen</h3>
+                        <p>5 Teile · 40+ Texte</p>
+                        <div class="category-progress">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <button class="btn btn-category" id="startLesenBtn">
+                            <span>Starten</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
                     
-                    <!-- رسالة الترحيب للمشتركين -->
-                    <div id="welcomeMessage" style="display: none;"></div>
-
-                    <!-- بطاقات الأقسام -->
-                    <div class="category-cards">
-                        <div class="category-card" id="lesenCategory">
-                            <i class="fas fa-book-open category-icon"></i>
-                            <h3>Leseverstehen</h3>
-                            <p>40+ قصة مقروءة</p>
-                            <button class="btn-category" id="startLesenBtn">
-                                ابدأ <i class="fas fa-arrow-left"></i>
-                            </button>
+                    <div class="category-card" id="hörenCategory">
+                        <div class="category-icon">
+                            <i class="fas fa-headphones"></i>
                         </div>
-                        
-                        <div class="category-card" id="hörenCategory">
-                            <i class="fas fa-headphones category-icon"></i>
-                            <h3>Hörverstehen</h3>
-                            <p>32+ قصة مسموعة</p>
-                            <button class="btn-category" id="startHörenBtn">
-                                ابدأ <i class="fas fa-arrow-left"></i>
-                            </button>
+                        <h3>Hörverstehen</h3>
+                        <p>4 Teile · 32+ Audios</p>
+                        <div class="category-progress">
+                            <div class="progress" style="width: 0%"></div>
                         </div>
+                        <button class="btn btn-category" id="startHörenBtn">
+                            <span>Starten</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <!-- قسم القراءة -->
-            <div id="lesenSection" style="display: none;">
+            <!-- LESEN SEKTION - Teil 1 (Aktuell) -->
+            <div class="category-section" id="lesenSection" style="display: none;">
                 <div class="section-header">
-                    <button class="back-btn" id="backToHomeFromLesen">
-                        <i class="fas fa-arrow-right"></i> رجوع
+                    <button class="btn btn-back" id="backToHomeFromLesen">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Zurück</span>
                     </button>
-                    <h2><i class="fas fa-book-open"></i> قصص القراءة</h2>
+                    <h2 class="section-title">
+                        <i class="fas fa-book-open section-title-icon"></i>
+                        Leseverstehen · Teil 1
+                    </h2>
+                    <div class="teil-indicator">
+                        <span class="teil active">1</span>
+                        <span class="teil">2</span>
+                        <span class="teil">3</span>
+                        <span class="teil">4</span>
+                        <span class="teil">5</span>
+                    </div>
                 </div>
-                <div class="stories-grid" id="lesenStoriesGrid"></div>
+
+                <!-- Geschichten-Grid für Lesen Teil 1 -->
+                <div class="stories-grid" id="lesenStoriesGrid">
+                    <!-- Wird per JavaScript befüllt -->
+                </div>
             </div>
 
-            <!-- قسم الاستماع -->
-            <div id="hörenSection" style="display: none;">
+            <!-- HÖREN SEKTION - Teil 1 -->
+            <div class="category-section" id="hörenSection" style="display: none;">
                 <div class="section-header">
-                    <button class="back-btn" id="backToHomeFromHören">
-                        <i class="fas fa-arrow-right"></i> رجوع
+                    <button class="btn btn-back" id="backToHomeFromHören">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Zurück</span>
                     </button>
-                    <h2><i class="fas fa-headphones"></i> قصص الاستماع</h2>
+                    <h2 class="section-title">
+                        <i class="fas fa-headphones section-title-icon"></i>
+                        Hörverstehen · Teil 1
+                    </h2>
+                    <div class="teil-indicator">
+                        <span class="teil active">1</span>
+                        <span class="teil">2</span>
+                        <span class="teil">3</span>
+                        <span class="teil">4</span>
+                    </div>
                 </div>
+
+                <!-- Geschichten-Grid für Hören Teil 1 -->
                 <div class="stories-grid" id="hörenStoriesGrid">
+                    <!-- Wird später mit Hörgeschichten befüllt -->
                     <div class="story-card coming-soon">
-                        <i class="fas fa-clock"></i>
-                        <h3>قريباً</h3>
-                        <p>قصص الاستماع قيد التطوير</p>
+                        <i class="fas fa-clock story-icon"></i>
+                        <h3>Hörgeschichten</h3>
+                        <p>Bald verfügbar</p>
+                        <div class="story-badge">Teil 1 · 8 Geschichten</div>
+                    </div>
+                    <div class="story-card coming-soon">
+                        <i class="fas fa-clock story-icon"></i>
+                        <h3>Alltagssituationen</h3>
+                        <p>Bald verfügbar</p>
+                        <div class="story-badge">Teil 1 · 6 Dialoge</div>
+                    </div>
+                    <div class="story-card coming-soon">
+                        <i class="fas fa-clock story-icon"></i>
+                        <h3>Kurze Ansagen</h3>
+                        <p>Bald verfügbar</p>
+                        <div class="story-badge">Teil 1 · 5 Ansagen</div>
                     </div>
                 </div>
             </div>
 
-            <!-- قسم الأسئلة -->
-            <div id="questionsSection" style="display: none;">
+            <!-- Fragen Sektion (für beide Kategorien) -->
+            <div class="questions-section" id="questionsSection" style="display: none;">
                 <div class="questions-header">
-                    <button class="back-btn" id="backToStoriesBtn">
-                        <i class="fas fa-arrow-right"></i> رجوع
+                    <button class="btn btn-back" id="backToStoriesBtn">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Zurück zu den Geschichten</span>
                     </button>
-                    <span id="currentCategoryBadge"></span>
+                    <div class="category-badge" id="currentCategoryBadge"></div>
                 </div>
-
-                <div class="story-info">
-                    <h2 id="currentStoryTitle"></h2>
-                    <span id="questionCounter">1/<span id="totalQuestions">0</span></span>
-                </div>
-
-                <!-- ملخص القصة -->
-                <div id="summarySection" class="summary-section">
-                    <div class="summary-tabs">
-                        <button class="summary-btn active" data-lang="ar">عربي</button>
-                        <button class="summary-btn" data-lang="de">Deutsch</button>
+                
+                <div class="story-header" id="storyHeader">
+                    <h2 class="story-title" id="currentStoryTitle"></h2>
+                    <div class="story-progress">
+                        <span id="currentQuestionNumber">1</span>/<span id="totalQuestions">8</span>
                     </div>
-                    <div id="summaryContent" class="summary-content" dir="rtl"></div>
                 </div>
 
-                <!-- السؤال -->
-                <div class="question-card">
-                    <div class="question-text" id="questionTextContainer"></div>
+                <!-- ملخص القصة مع اختيار اللغة -->
+                <div class="summary-section" id="summarySection">
+                    <div class="summary-header">
+                        <span class="summary-label">
+                            <i class="fas fa-book-reader"></i>
+                            ملخص القصة / Zusammenfassung
+                        </span>
+                        <div class="summary-lang-tabs">
+                            <button type="button" class="summary-lang-btn active" data-lang="ar" title="العربية">
+                                عربي
+                            </button>
+                            <button type="button" class="summary-lang-btn" data-lang="de" title="Deutsch">
+                                Deutsch
+                            </button>
+                        </div>
+                    </div>
+                    <div class="summary-content" id="summaryContent" dir="auto"></div>
+                </div>
 
-                    <div class="options">
-                        <button class="option-r" data-answer="R">
-                            <i class="fas fa-check-circle"></i> Richtig (R)
+                <div class="question-card" id="questionCard">
+                    <div class="question-badge">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Ist diese Aussage richtig oder falsch?</span>
+                    </div>
+                    
+                    <div class="question-text-container" id="questionTextContainer">
+                        <!-- Wird per JavaScript befüllt -->
+                    </div>
+
+                    <div class="options-container" id="optionsContainer">
+                        <button class="option-btn option-r" data-answer="R">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Richtig (R)</span>
                         </button>
-                        <button class="option-f" data-answer="F">
-                            <i class="fas fa-times-circle"></i> Falsch (F)
+                        <button class="option-btn option-f" data-answer="F">
+                            <i class="fas fa-times-circle"></i>
+                            <span>Falsch (F)</span>
                         </button>
                     </div>
 
-                    <!-- التغذية الراجعة -->
-                    <div id="feedbackContainer" class="feedback-container" style="display: none;">
-                        <span id="feedbackIcon"></span>
-                        <span id="feedbackMessage"></span>
+                    <div class="feedback-container" id="feedbackContainer" style="display: none;">
+                        <div class="feedback-icon" id="feedbackIcon"></div>
+                        <div class="feedback-message" id="feedbackMessage"></div>
                     </div>
 
-                    <!-- زر التالي -->
-                    <div class="next-btn-container">
-                        <button id="nextBtn" class="next-btn" disabled>
-                            التالي <i class="fas fa-arrow-left"></i>
+                    <div class="navigation-buttons">
+                        <button class="btn btn-next" id="nextBtn" disabled>
+                            <span>Nächste Frage</span>
+                            <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- صفحة النتائج -->
-            <div id="resultsSection" style="display: none;">
+            <!-- Ergebnisse Sektion -->
+            <div class="results-section" id="resultsSection" style="display: none;">
                 <div class="results-card">
-                    <i class="fas fa-trophy results-icon"></i>
-                    <h2>النتيجة</h2>
-                    <div id="statusBadge" class="status-badge"></div>
-                    
-                    <div class="score-circle">
-                        <span id="finalScore">0</span>
-                        <span>/<span id="finalTotal">0</span></span>
+                    <div class="results-icon">
+                        <i class="fas fa-trophy"></i>
                     </div>
-
-                    <div class="score-details">
-                        <div><i class="fas fa-check-circle"></i> صحيح: <span id="correctCount">0</span></div>
-                        <div><i class="fas fa-times-circle"></i> خطأ: <span id="wrongCount">0</span></div>
-                        <div><i class="fas fa-star"></i> النقاط: <span id="pointsEarned">0</span></div>
+                    <h2 class="results-title">Geschafft! 🎉</h2>
+                    <div class="results-status" id="resultsStatus">
+                        <span class="status-badge status-pass" id="statusBadge">ناجح</span>
+                    </div>
+                    <p class="results-subtitle" id="resultsSubtitle">Tolle Leistung!</p>
+                    
+                    <div class="score-display">
+                        <div class="score-circle" id="scoreCircle">
+                            <span class="score-number" id="finalScore">0</span>
+                            <span class="score-total">/ <span id="finalTotal">0</span></span>
+                        </div>
+                        <div class="score-stats">
+                            <div class="score-stat correct-stat">
+                                <i class="fas fa-check-circle"></i>
+                                <span id="correctCount">0</span> richtig
+                            </div>
+                            <div class="score-stat wrong-stat">
+                                <i class="fas fa-times-circle"></i>
+                                <span id="wrongCount">0</span> falsch
+                            </div>
+                            <div class="score-stat points-stat">
+                                <i class="fas fa-star"></i>
+                                <span id="pointsEarned">0</span> Punkte
+                            </div>
+                        </div>
                     </div>
 
                     <div class="results-actions">
-                        <button id="tryAgainBtn" class="btn-primary">محاولة مرة أخرى</button>
-                        <button id="moreStoriesBtn" class="btn-secondary">المزيد من القصص</button>
+                        <button class="btn btn-primary" id="tryAgainBtn">
+                            <i class="fas fa-redo-alt"></i>
+                            <span>Nochmal üben</span>
+                        </button>
+                        <button class="btn btn-secondary" id="moreStoriesBtn">
+                            <i class="fas fa-book"></i>
+                            <span>Mehr Geschichten</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </main>
 
+        <!-- Footer -->
         <footer>
-            <p>© 2026 Deutsch mit Rawad</p>
+            <p>© 2026 Deutsch mit Rawad · Lerne Deutsch mit Spaß</p>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
         </footer>
     </div>
 
-    <!-- رسائل منبثقة -->
-    <div id="toastNotification" class="toast-notification">
+    <!-- Toast Benachrichtigungen -->
+    <div class="toast-notification" id="toastNotification">
+        <i class="fas fa-info-circle"></i>
         <span id="toastMessage"></span>
     </div>
 
